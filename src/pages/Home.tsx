@@ -1,6 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
+import {NONAME} from 'dns'
+
+const PageWrapper = styled.div`
+  max-width: 1600px;
+  margin: 0 auto;
+`
 
 const Header = styled.div`
   display: flex;
@@ -30,20 +36,50 @@ enum NavigationText {
   CLIENTS = 'Clients',
 }
 
+const activeStyle = {
+  textDecoration: 'none',
+  color: '#16C0F5',
+}
+
+const inactiveStyle = {
+  textDecoration: 'none',
+  color: '#ffffff',
+}
+
 function Home() {
   return (
-    <>
+    <PageWrapper>
       <Header>
         <LogoPlaceholder>ODIS</LogoPlaceholder>
         <NavigationPanel>
-          <NavLink to={NavigationRoutes.ABOUT}> {NavigationText.ABOUT} </NavLink>
-          <NavLink to={NavigationRoutes.SERVICES}> {NavigationText.SERVICES} </NavLink>
-          <NavLink to={NavigationRoutes.MEMBERS}> {NavigationText.MEMBERS} </NavLink>
-          <NavLink to={NavigationRoutes.CLIENTS}> {NavigationText.CLIENTS} </NavLink>
+          <NavLink
+            to={NavigationRoutes.ABOUT}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.ABOUT}
+          </NavLink>
+          <NavLink
+            to={NavigationRoutes.SERVICES}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.SERVICES}
+          </NavLink>
+          <NavLink
+            to={NavigationRoutes.MEMBERS}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.MEMBERS}
+          </NavLink>
+          <NavLink
+            to={NavigationRoutes.CLIENTS}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.CLIENTS}
+          </NavLink>
         </NavigationPanel>
         <CTAButton>Connect // Build with us</CTAButton>
       </Header>
-    </>
+    </PageWrapper>
   )
 }
 
