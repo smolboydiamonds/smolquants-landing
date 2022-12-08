@@ -17,16 +17,23 @@ const NavigationRoute = styled.div``
 
 const CTAButton = styled.button``
 
+enum HeaderNavigationRoutes {
+  ABOUT = 'About',
+  SERVICES = 'Services',
+  MEMBERS = 'Members',
+  CLIENTS = 'Clients',
+}
+
 function Home() {
   return (
     <>
       <Header>
         <LogoPlaceholder>ODIS</LogoPlaceholder>
         <NavigationPanel>
-          <NavigationRoute></NavigationRoute>
-          <NavigationRoute></NavigationRoute>
-          <NavigationRoute></NavigationRoute>
-          <NavigationRoute></NavigationRoute>
+          <NavigationRoute>{HeaderNavigationRoutes.ABOUT}</NavigationRoute>
+          <NavigationRoute>{HeaderNavigationRoutes.SERVICES}</NavigationRoute>
+          <NavigationRoute>{HeaderNavigationRoutes.MEMBERS}</NavigationRoute>
+          <NavigationRoute>{HeaderNavigationRoutes.CLIENTS}</NavigationRoute>
         </NavigationPanel>
         <CTAButton>Connect // Build with us</CTAButton>
       </Header>
