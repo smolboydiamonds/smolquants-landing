@@ -1,19 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
-import {NONAME} from 'dns'
 
 const PageWrapper = styled.div`
   max-width: 1600px;
   margin: 0 auto;
+  width: 100%;
 `
 
 const Header = styled.div`
   display: flex;
   flex-direction: row;
+  font-family: 'Lexend-Deca', sans-serif;
+  font-weight: 700;
+  justify-content: space-between;
+  margin: 48px;
 `
 
-const LogoPlaceholder = styled.div``
+const LogoPlaceholder = styled.div`
+  font-size: 30px;
+  font-family: 'Noto-Sans-JP', sans-serif;
+  letter-spacing: 3px;
+`
 
 const NavigationPanel = styled.div`
   display: flex;
