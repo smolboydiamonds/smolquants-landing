@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {NavLink} from 'react-router-dom'
 
 const Header = styled.div`
   display: flex;
@@ -13,11 +14,16 @@ const NavigationPanel = styled.div`
   flex-direction: row;
 `
 
-const NavigationRoute = styled.div``
-
 const CTAButton = styled.button``
 
-enum HeaderNavigationRoutes {
+enum NavigationRoutes {
+  ABOUT = '/about',
+  SERVICES = '/services',
+  MEMBERS = '/members',
+  CLIENTS = '/clients',
+}
+
+enum NavigationText {
   ABOUT = 'About',
   SERVICES = 'Services',
   MEMBERS = 'Members',
@@ -30,10 +36,10 @@ function Home() {
       <Header>
         <LogoPlaceholder>ODIS</LogoPlaceholder>
         <NavigationPanel>
-          <NavigationRoute>{HeaderNavigationRoutes.ABOUT}</NavigationRoute>
-          <NavigationRoute>{HeaderNavigationRoutes.SERVICES}</NavigationRoute>
-          <NavigationRoute>{HeaderNavigationRoutes.MEMBERS}</NavigationRoute>
-          <NavigationRoute>{HeaderNavigationRoutes.CLIENTS}</NavigationRoute>
+          <NavLink to={NavigationRoutes.ABOUT}> {NavigationText.ABOUT} </NavLink>
+          <NavLink to={NavigationRoutes.SERVICES}> {NavigationText.SERVICES} </NavLink>
+          <NavLink to={NavigationRoutes.MEMBERS}> {NavigationText.MEMBERS} </NavLink>
+          <NavLink to={NavigationRoutes.CLIENTS}> {NavigationText.CLIENTS} </NavLink>
         </NavigationPanel>
         <CTAButton>Connect // Build with us</CTAButton>
       </Header>
