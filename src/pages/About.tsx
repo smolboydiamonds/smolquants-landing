@@ -8,8 +8,35 @@ const PageWrapper = styled.div`
   flex: 1;
 `
 
+const SectionContainer = styled.div`
+  max-width: 850px;
+  border-top: 1px solid #fff;
+  margin: 70px auto auto;
+`
+
+const Title = styled.div`
+  font-size: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  margin: 16px 0;
+`
+
+interface SectionTitleProps {
+  text: string
+}
+
+const SectionTitle = ({text}: SectionTitleProps) => {
+  return <Title>// {text}</Title>
+}
+
 function About() {
-  return <PageWrapper></PageWrapper>
+  return (
+    <PageWrapper>
+      <SectionContainer>
+        <SectionTitle text="About"></SectionTitle>
+      </SectionContainer>
+    </PageWrapper>
+  )
 }
 
 export default About
