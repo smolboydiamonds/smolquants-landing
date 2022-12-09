@@ -62,7 +62,6 @@ const CTAButton = styled.button`
 function Home() {
   return (
     <PageWrapper>
-      <Header />
       <HeroContent>
         <HeroHeader>O D I S</HeroHeader>
         <HeroSubheader>a web3 collective</HeroSubheader>

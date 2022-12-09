@@ -7,7 +7,8 @@ const HeaderContainer = styled.div`
   font-family: 'Lexend-Deca', sans-serif;
   font-weight: 700;
   justify-content: space-between;
-  margin: 48px;
+  margin: 48px 48px 0;
+  max-width: 1600px;
 `
 
 const LogoPlaceholder = styled.div`
