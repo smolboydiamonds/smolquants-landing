@@ -9,10 +9,30 @@ const PageWrapper = styled.div`
   width: 100%;
 `
 
+const Footer = styled.footer`
+  display: flex;
+  flex-direction: row;
+  margin: 48px;
+  justify-content: space-between;
+`
+
+const Copyright = styled.div`
+  font-size: 12px;
+  margin-right: auto;
+  font-family: 'Lexend-Deca', sans-serif;
+  font-weight: 600;
+`
+
+const SocialMediaContainer = styled.div``
+
 function Home() {
   return (
     <PageWrapper>
       <Header />
+      <Footer>
+        <Copyright>©2022 Odis. All Rights Reserved.</Copyright>
+        <SocialMediaContainer></SocialMediaContainer>
+      </Footer>
     </PageWrapper>
   )
 }
