@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {NavLink} from 'react-router-dom'
-import Header from '../components/Header/Header'
+import {CTAButton} from '../components/Header/Header'
 
 const PageWrapper = styled.div`
   max-width: 1600px;
@@ -39,7 +38,7 @@ const HeroDescription = styled.div`
   font-weight: 500;
 `
 
-const CTAButton = styled.button`
+const HeroButton = styled(CTAButton)`
   width: 225px;
   margin: 18px auto;
 `
@@ -56,7 +55,7 @@ function Home() {
           our full suite of service offerings, we help founders bootstrap their community and
           operations to scale on their own.
         </HeroDescription>
-        <CTAButton>Connect // Build with us</CTAButton>
+        <HeroButton>Connect // Build with us</HeroButton>
       </HeroContent>
     </PageWrapper>
   )

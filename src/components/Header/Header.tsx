@@ -27,8 +27,14 @@ const NavigationPanel = styled.div`
   flex-direction: row;
 `
 
-const CTAButton = styled.button`
-  margin-left: auto;
+export const CTAButton = styled.button`
+  background: #16c0f5;
+  border-radius: 16px;
+  color: #fff;
+  border-style: none;
+  font-weight: bold;
+  font-family: 'Lexend Deca', sans-serif;
+  padding: 8px 16px;
 `
 
 enum NavigationRoutes {
