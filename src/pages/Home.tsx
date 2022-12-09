@@ -7,6 +7,7 @@ const PageWrapper = styled.div`
   max-width: 1600px;
   margin: 0 auto;
   width: 100%;
+  flex: 1;
 `
 const HeroContent = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ const HeroContent = styled.div`
   font-family: 'Noto-Sans-JP', sans-serif;
   font-weight: bold;
   text-align: center;
-  margin: auto;
+  margin: 100px auto auto;
 `
 
 const HeroHeader = styled.div`

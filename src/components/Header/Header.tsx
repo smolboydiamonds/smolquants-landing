@@ -11,6 +11,11 @@ const HeaderContainer = styled.div`
   max-width: 1600px;
 `
 
+const CornerContainer = styled.div`
+  display: flex;
+  width: 200px;
+`
+
 const LogoPlaceholder = styled.div`
   font-size: 30px;
   font-family: 'Noto-Sans-JP', sans-serif;
@@ -22,7 +27,9 @@ const NavigationPanel = styled.div`
   flex-direction: row;
 `
 
-const CTAButton = styled.button``
+const CTAButton = styled.button`
+  margin-left: auto;
+`
 
 enum NavigationRoutes {
   ABOUT = '/about',
@@ -41,17 +48,21 @@ enum NavigationText {
 const activeStyle = {
   textDecoration: 'none',
   color: '#16C0F5',
+  margin: '0 9px',
 }
 
 const inactiveStyle = {
   textDecoration: 'none',
   color: '#ffffff',
+  margin: '0 9px',
 }
 
 export default function Header() {
   return (
     <HeaderContainer>
-      <LogoPlaceholder>ODIS</LogoPlaceholder>
+      <CornerContainer>
+        <LogoPlaceholder>ODIS</LogoPlaceholder>
+      </CornerContainer>
       <NavigationPanel>
         <NavLink
           to={NavigationRoutes.ABOUT}
@@ -78,7 +89,9 @@ export default function Header() {
           {NavigationText.CLIENTS}
         </NavLink>
       </NavigationPanel>
-      <CTAButton>Connect // Build with us</CTAButton>
+      <CornerContainer>
+        <CTAButton>Connect // Build with us</CTAButton>
+      </CornerContainer>
     </HeaderContainer>
   )
 }
