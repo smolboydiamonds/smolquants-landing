@@ -13,7 +13,7 @@ const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 850px;
-  font-family: 'Noto-Sans-JP', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-weight: bold;
   text-align: center;
   margin: 100px auto auto;
@@ -36,6 +36,7 @@ const Line = styled.div`
 
 const HeroDescription = styled.div`
   font-size: 16px;
+  font-weight: 500;
 `
 
 const CTAButton = styled.button`

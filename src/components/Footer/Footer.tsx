@@ -10,7 +10,7 @@ const FooterContainer = styled.footer`
 const Copyright = styled.div`
   font-size: 12px;
   margin-right: auto;
-  font-family: 'Lexend-Deca', sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
   font-weight: 600;
 `
 

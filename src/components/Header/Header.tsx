@@ -4,8 +4,7 @@ import {NavLink} from 'react-router-dom'
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
-  font-family: 'Lexend-Deca', sans-serif;
-  font-weight: 700;
+  font-family: 'Lexend Deca', sans-serif;
   justify-content: space-between;
   margin: 48px 48px 0;
   max-width: 1600px;
@@ -18,7 +17,8 @@ const CornerContainer = styled.div`
 
 const LogoPlaceholder = styled.div`
   font-size: 30px;
-  font-family: 'Noto-Sans-JP', sans-serif;
+  font-weight: 700;
+  font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 3px;
 `
 
@@ -48,13 +48,13 @@ enum NavigationText {
 const activeStyle = {
   textDecoration: 'none',
   color: '#16C0F5',
-  margin: '0 9px',
+  margin: 'auto 9px',
 }
 
 const inactiveStyle = {
   textDecoration: 'none',
   color: '#ffffff',
-  margin: '0 9px',
+  margin: 'auto 9px',
 }
 
 export default function Header() {
