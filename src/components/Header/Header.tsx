@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {NavLink} from 'react-router-dom'
+import {NavLink, useNavigate} from 'react-router-dom'
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -15,11 +15,12 @@ const CornerContainer = styled.div`
   width: 200px;
 `
 
-const LogoPlaceholder = styled.div`
+const BrandLogo = styled.div`
   font-size: 30px;
   font-weight: 700;
   font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 3px;
+  cursor: pointer;
 `
 
 const NavigationPanel = styled.div`
@@ -64,10 +65,13 @@ const inactiveStyle = {
 }
 
 export default function Header() {
+  const navigate = useNavigate()
+  const redirectToHome: () => void = () => navigate('/')
+
   return (
     <HeaderContainer>
       <CornerContainer>
-        <LogoPlaceholder>ODIS</LogoPlaceholder>
+        <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
       </CornerContainer>
       <NavigationPanel>
         <NavLink
