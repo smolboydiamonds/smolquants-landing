@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import styled from 'styled-components'
 import Home from './pages/Home'
 import About from './pages/About'
+import Services from './pages/Services'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
       <Footer />
     </AppWrapper>
