@@ -9,6 +9,40 @@ const PageWrapper = styled.div`
   flex: 1;
 `
 
+const ProfileWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const ProfileIcon = styled.div``
+
+const ProfileDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const Name = styled.div``
+
+const SocialMediaContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const Expertise = styled.div``
+
+const UserProfile = () => {
+  return (
+    <ProfileWrapper>
+      <ProfileIcon></ProfileIcon>
+      <ProfileDescription>
+        <Name></Name>
+        <SocialMediaContainer></SocialMediaContainer>
+        <Expertise></Expertise>
+      </ProfileDescription>
+    </ProfileWrapper>
+  )
+}
+
 function About() {
   return (
     <PageWrapper>
