@@ -12,9 +12,15 @@ const PageWrapper = styled.div`
 const ProfileWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  background: white;
 `
 
-const ProfileIcon = styled.div``
+const ProfileIcon = styled.div`
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid #16c0f5;
+`
 
 const ProfileDescription = styled.div`
   display: flex;
@@ -30,7 +36,14 @@ const SocialMediaContainer = styled.div`
 
 const Expertise = styled.div``
 
-const UserProfile = () => {
+interface UserProfileProps {
+  name: string
+  twitter_handle?: string
+  github_handle?: string
+  medium_handle?: string
+}
+
+const UserProfile = ({name, twitter_handle, github_handle, medium_handle}: UserProfileProps) => {
   return (
     <ProfileWrapper>
       <ProfileIcon></ProfileIcon>
