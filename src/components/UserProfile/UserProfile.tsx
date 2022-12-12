@@ -12,8 +12,10 @@ const ProfileWrapper = styled.div`
 `
 
 const ProfileIcon = styled.div`
-  height: 100px;
-  width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  min-width: 100px;
+  max-height: 100px;
   border-radius: 50%;
   border: 3px solid #16c0f5;
   margin-right: 16px;
@@ -22,6 +24,7 @@ const ProfileIcon = styled.div`
 const ProfileDescription = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 8px;
 `
 
 const Name = styled.div`

@@ -11,14 +11,6 @@ const PageWrapper = styled.div`
   flex: 1;
 `
 
-const MockData = {
-  name: 'Random Name',
-  expertise: 'Business Development, DAO Ops, Fundraising, NFT, Token Distribution & Launch',
-  twitter_handle: 'random_twitter',
-  github_handle: 'random_github',
-  medium_handle: 'random_medium',
-}
-
 function About() {
   return (
     <PageWrapper>
