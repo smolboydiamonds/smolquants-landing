@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {NavLink, useNavigate} from 'react-router-dom'
+import {slide as Menu} from 'react-burger-menu'
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -63,12 +64,66 @@ const inactiveStyle = {
   margin: 'auto 9px',
 }
 
+const styles = {
+  bmBurgerButton: {
+    position: 'fixed',
+    width: '36px',
+    height: '30px',
+    right: '36px',
+    top: '36px',
+  },
+  bmBurgerBars: {
+    background: '#373a47',
+  },
+  bmBurgerBarsHover: {
+    background: '#a90000',
+  },
+  bmCrossButton: {
+    height: '24px',
+    width: '24px',
+  },
+  bmCross: {
+    background: '#bdc3c7',
+  },
+  bmMenuWrap: {
+    position: 'fixed',
+    height: '100%',
+    top: '0px',
+  },
+  bmMenu: {
+    background: '#373a47',
+    padding: '2.5em 1.5em 0',
+    fontSize: '1.15em',
+  },
+  bmMorphShape: {
+    fill: '#373a47',
+  },
+  bmItemList: {
+    color: '#b8b7ad',
+    padding: '0.8em',
+  },
+  bmItem: {
+    display: 'inline-block',
+  },
+  bmOverlay: {
+    background: 'rgba(0, 0, 0, 0.3)',
+  },
+}
+
 export default function Header() {
   const navigate = useNavigate()
   const redirectToHome: () => void = () => navigate('/')
 
   return (
     <HeaderContainer>
+      <Menu styles={styles} right>
+        <NavLink
+          to={NavigationRoutes.ABOUT}
+          style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+        >
+          {NavigationText.ABOUT}
+        </NavLink>
+      </Menu>
       <CornerContainer>
         <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
       </CornerContainer>
@@ -85,7 +140,7 @@ export default function Header() {
         >
           {NavigationText.SERVICES}
         </NavLink>
-        {/* <NavLink
+        <NavLink
           to={NavigationRoutes.MEMBERS}
           style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
         >
@@ -96,7 +151,7 @@ export default function Header() {
           style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
         >
           {NavigationText.CLIENTS}
-        </NavLink> */}
+        </NavLink>
       </NavigationPanel>
       <CornerContainer>
         <CTAButton>Connect // Build with us</CTAButton>

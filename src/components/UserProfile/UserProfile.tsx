@@ -6,7 +6,7 @@ const ProfileWrapper = styled.div`
   background: white;
   border-radius: 64px;
   padding: 16px 48px;
-  margin: 16px 0;
+  margin: 24px 0;
   font-family: 'Noto San JP', sans-serif;
 `
 
