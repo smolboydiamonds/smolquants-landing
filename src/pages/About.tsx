@@ -52,6 +52,13 @@ function About() {
           github_handle={MockData.github_handle}
           medium_handle={MockData.medium_handle}
         />
+        <UserProfile
+          name={MockData.name}
+          expertise={MockData.expertise}
+          twitter_handle={MockData.twitter_handle}
+          github_handle={MockData.github_handle}
+          medium_handle={MockData.medium_handle}
+        />
       </SectionContainer>
     </PageWrapper>
   )
