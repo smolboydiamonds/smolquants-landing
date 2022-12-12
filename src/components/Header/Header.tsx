@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {NavLink, useNavigate} from 'react-router-dom'
-import {slide as Menu} from 'react-burger-menu'
+import {slide as SlideMenu} from 'react-burger-menu'
+import './SlideMenu.css'
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -64,6 +65,12 @@ const inactiveStyle = {
   margin: 'auto 9px',
 }
 
+const StyledSlideMenu = styled(SlideMenu)`
+  @media (min-width: 415px) {
+    display: none;
+  }
+`
+
 const styles = {
   bmBurgerButton: {
     position: 'fixed',
@@ -116,14 +123,14 @@ export default function Header() {
 
   return (
     <HeaderContainer>
-      <Menu styles={styles} right>
+      <StyledSlideMenu styles={styles} right>
         <NavLink
           to={NavigationRoutes.ABOUT}
           style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
         >
           {NavigationText.ABOUT}
         </NavLink>
-      </Menu>
+      </StyledSlideMenu>
       <CornerContainer>
         <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
       </CornerContainer>
