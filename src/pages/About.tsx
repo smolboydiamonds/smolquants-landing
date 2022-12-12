@@ -43,13 +43,43 @@ interface UserProfileProps {
   medium_handle?: string
 }
 
+const SpecificSocialMedia = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const SocialMediaName = styled.div`
+  font-weight: bold;
+`
+
+const ClickableUserHandle = styled.a``
+
+const UserSocialMedia = () => {
+  return (
+    <SocialMediaContainer>
+      <SpecificSocialMedia>
+        <SocialMediaName>twitter: </SocialMediaName>
+        <ClickableUserHandle href=""></ClickableUserHandle>
+      </SpecificSocialMedia>
+      <SpecificSocialMedia>
+        <SocialMediaName>github: </SocialMediaName>
+        <ClickableUserHandle href=""></ClickableUserHandle>
+      </SpecificSocialMedia>
+      <SpecificSocialMedia>
+        <SocialMediaName>medium: </SocialMediaName>
+        <ClickableUserHandle href=""></ClickableUserHandle>
+      </SpecificSocialMedia>
+    </SocialMediaContainer>
+  )
+}
+
 const UserProfile = ({name, twitter_handle, github_handle, medium_handle}: UserProfileProps) => {
   return (
     <ProfileWrapper>
       <ProfileIcon></ProfileIcon>
       <ProfileDescription>
-        <Name></Name>
-        <SocialMediaContainer></SocialMediaContainer>
+        <Name>{name}</Name>
+        <UserSocialMedia />
         <Expertise></Expertise>
       </ProfileDescription>
     </ProfileWrapper>
