@@ -7,7 +7,6 @@ const HeaderContainer = styled.div`
   font-family: 'Lexend Deca', sans-serif;
   justify-content: space-between;
   margin: 48px 48px 0;
-  max-width: 1600px;
 `
 
 const CornerContainer = styled.div`
