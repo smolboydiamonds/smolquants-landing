@@ -1,3 +1,4 @@
+import {useMemo} from 'react'
 import styled from 'styled-components'
 
 const ProfileWrapper = styled.div`
@@ -6,6 +7,7 @@ const ProfileWrapper = styled.div`
   background: white;
   border-radius: 64px;
   padding: 16px 48px;
+  font-family: 'Noto San JP', sans-serif;
 `
 
 const ProfileIcon = styled.div`
@@ -31,7 +33,11 @@ const SocialMediaContainer = styled.div`
   color: black;
 `
 
-const Expertise = styled.div``
+const Expertise = styled.div`
+  color: black;
+  margin-top: 32px;
+  font-size: 14px;
+`
 
 const SpecificSocialMedia = styled.div`
   display: flex;
@@ -43,7 +49,11 @@ const SocialMediaName = styled.div`
   font-weight: bold;
 `
 
-const ClickableUserHandle = styled.a``
+const ClickableUserHandle = styled.a`
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
+`
 
 interface UserSocialMediaProps {
   twitter_handle?: string
@@ -68,7 +78,7 @@ const UserSocialMedia = ({twitter_handle, github_handle, medium_handle}: UserSoc
     <SocialMediaContainer>
       {TwitterProfileLink && (
         <SpecificSocialMedia>
-          <SocialMediaName>twitter: </SocialMediaName>
+          <SocialMediaName>twitter:&nbsp;</SocialMediaName>
           <ClickableUserHandle href={TwitterProfileLink} target="_blank" rel="noopener noreferrer">
             @{twitter_handle}
           </ClickableUserHandle>
@@ -76,7 +86,7 @@ const UserSocialMedia = ({twitter_handle, github_handle, medium_handle}: UserSoc
       )}
       {GithubProfileLink && (
         <SpecificSocialMedia>
-          <SocialMediaName>github: </SocialMediaName>
+          <SocialMediaName>github:&nbsp;</SocialMediaName>
           <ClickableUserHandle href={GithubProfileLink} target="_blank" rel="noopener noreferrer">
             @{github_handle}
           </ClickableUserHandle>
@@ -84,7 +94,7 @@ const UserSocialMedia = ({twitter_handle, github_handle, medium_handle}: UserSoc
       )}
       {MediumProfileLink && (
         <SpecificSocialMedia>
-          <SocialMediaName>medium: </SocialMediaName>
+          <SocialMediaName>medium:&nbsp;</SocialMediaName>
           <ClickableUserHandle href={MediumProfileLink} target="_blank" rel="noopener noreferrer">
             @{medium_handle}
           </ClickableUserHandle>
@@ -94,8 +104,9 @@ const UserSocialMedia = ({twitter_handle, github_handle, medium_handle}: UserSoc
   )
 }
 
-interface UserProfileProps {
+interface UserProfileProps extends UserSocialMediaProps {
   name: string
+  expertise: string
   twitter_handle?: string
   github_handle?: string
   medium_handle?: string
@@ -103,6 +114,7 @@ interface UserProfileProps {
 
 export const UserProfile = ({
   name,
+  expertise,
   twitter_handle,
   github_handle,
   medium_handle,
@@ -117,7 +129,7 @@ export const UserProfile = ({
           github_handle={github_handle}
           medium_handle={medium_handle}
         />
-        <Expertise></Expertise>
+        <Expertise>Expertise: {expertise} </Expertise>
       </ProfileDescription>
     </ProfileWrapper>
   )

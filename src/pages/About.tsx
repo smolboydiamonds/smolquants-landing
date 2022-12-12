@@ -10,6 +10,14 @@ const PageWrapper = styled.div`
   flex: 1;
 `
 
+const MockData = {
+  name: 'Random Name',
+  expertise: 'Business Development, DAO Ops, Fundraising, NFT, Token Distribution & Launch',
+  twitter_handle: 'random_twitter',
+  github_handle: 'random_github',
+  medium_handle: 'random_medium',
+}
+
 function About() {
   return (
     <PageWrapper>
@@ -38,10 +46,11 @@ function About() {
         </SectionParagraph>
         <SectionTitle text="Core Team" />
         <UserProfile
-          name="Lorem Ipsum"
-          twitter_handle="randomtwitter"
-          github_handle="randomgithub"
-          medium_handle="randommedium"
+          name={MockData.name}
+          expertise={MockData.expertise}
+          twitter_handle={MockData.twitter_handle}
+          github_handle={MockData.github_handle}
+          medium_handle={MockData.medium_handle}
         />
       </SectionContainer>
     </PageWrapper>
