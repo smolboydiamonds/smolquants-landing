@@ -105,7 +105,7 @@ const UserSocialMedia = ({twitter_handle, github_handle, medium_handle}: UserSoc
   )
 }
 
-interface UserProfileProps extends UserSocialMediaProps {
+export interface UserProfileProps extends UserSocialMediaProps {
   name: string
   expertise: string
   twitter_handle?: string

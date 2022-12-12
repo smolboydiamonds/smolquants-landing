@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {UserProfile} from '../components/UserProfile/UserProfile'
 import {SectionContainer, SectionTitle, SectionParagraph} from '../components/Section/Section'
+import {CoreTeamUsers} from '../constants/core-team'
 
 const PageWrapper = styled.div`
   max-width: 1600px;
@@ -45,20 +46,15 @@ function About() {
           direction.
         </SectionParagraph>
         <SectionTitle text="Core Team" />
-        <UserProfile
-          name={MockData.name}
-          expertise={MockData.expertise}
-          twitter_handle={MockData.twitter_handle}
-          github_handle={MockData.github_handle}
-          medium_handle={MockData.medium_handle}
-        />
-        <UserProfile
-          name={MockData.name}
-          expertise={MockData.expertise}
-          twitter_handle={MockData.twitter_handle}
-          github_handle={MockData.github_handle}
-          medium_handle={MockData.medium_handle}
-        />
+        {CoreTeamUsers.map((user, index) => (
+          <UserProfile
+            name={user.name}
+            expertise={user.expertise}
+            twitter_handle={user.twitter_handle}
+            github_handle={user?.github_handle}
+            medium_handle={user?.medium_handle}
+          />
+        ))}
       </SectionContainer>
     </PageWrapper>
   )
