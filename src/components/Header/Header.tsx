@@ -86,7 +86,7 @@ export default function Header() {
         >
           {NavigationText.SERVICES}
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to={NavigationRoutes.MEMBERS}
           style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
         >
@@ -97,7 +97,7 @@ export default function Header() {
           style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
         >
           {NavigationText.CLIENTS}
-        </NavLink>
+        </NavLink> */}
       </NavigationPanel>
       <CornerContainer>
         <CTAButton>Connect // Build with us</CTAButton>
