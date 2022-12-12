@@ -23,7 +23,7 @@ const Content = styled.div<{isOpen: boolean}>`
   max-height: ${({isOpen}) => (isOpen ? '100vh' : '0vh')};
   overflow: hidden;
   display: block;
-  padding: ${({isOpen}) => (isOpen ? '16px 0' : 'auto')};
+  padding-left: ${({isOpen}) => (isOpen ? '16px' : 'auto')};
 `
 
 export const AccordionSelection = styled.div`

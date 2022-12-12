@@ -25,5 +25,5 @@ export const SectionParagraph = styled.div`
   font-size: 16px;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: regular;
-  margin-top: 16px;
+  margin-bottom: 16px;
 `
