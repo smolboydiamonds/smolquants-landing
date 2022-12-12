@@ -8,7 +8,7 @@ const Container = styled.div`
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: bold;
   text-align: center;
-  margin: 100px auto auto;
+  margin: 25vh auto auto;
 `
 
 const Header = styled.div`
