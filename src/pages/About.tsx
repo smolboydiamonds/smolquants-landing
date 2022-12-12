@@ -54,21 +54,45 @@ const SocialMediaName = styled.div`
 
 const ClickableUserHandle = styled.a``
 
-const UserSocialMedia = () => {
+interface UserSocialMediaProps {
+  twitter_handle?: string
+  github_handle?: string
+  medium_handle?: string
+}
+
+enum SocialMediaPrefixes {
+  TWITTER = 'https://www.twitter.com/',
+  GITHUB = 'https://www.github.com/',
+  MEDIUM = 'https://www.medium.com/',
+}
+
+const UserSocialMedia = ({twitter_handle, github_handle, medium_handle}: UserSocialMediaProps) => {
+  const TwitterProfileLink = twitter_handle
+    ? SocialMediaPrefixes.TWITTER + twitter_handle
+    : undefined
+  const GithubProfileLink = github_handle ? SocialMediaPrefixes.GITHUB + github_handle : undefined
+  const MediumProfileLink = medium_handle ? SocialMediaPrefixes.MEDIUM + medium_handle : undefined
+
   return (
     <SocialMediaContainer>
-      <SpecificSocialMedia>
-        <SocialMediaName>twitter: </SocialMediaName>
-        <ClickableUserHandle href=""></ClickableUserHandle>
-      </SpecificSocialMedia>
-      <SpecificSocialMedia>
-        <SocialMediaName>github: </SocialMediaName>
-        <ClickableUserHandle href=""></ClickableUserHandle>
-      </SpecificSocialMedia>
-      <SpecificSocialMedia>
-        <SocialMediaName>medium: </SocialMediaName>
-        <ClickableUserHandle href=""></ClickableUserHandle>
-      </SpecificSocialMedia>
+      {TwitterProfileLink ?? (
+        <SpecificSocialMedia>
+          <SocialMediaName>twitter: </SocialMediaName>
+          <ClickableUserHandle href={TwitterProfileLink}></ClickableUserHandle>
+        </SpecificSocialMedia>
+      )}
+      {GithubProfileLink ?? (
+        <SpecificSocialMedia>
+          <SocialMediaName>github: </SocialMediaName>
+          <ClickableUserHandle href={GithubProfileLink}></ClickableUserHandle>
+        </SpecificSocialMedia>
+      )}
+      {MediumProfileLink ?? (
+        <SpecificSocialMedia>
+          <SocialMediaName>medium: </SocialMediaName>
+          <ClickableUserHandle href={MediumProfileLink}></ClickableUserHandle>
+        </SpecificSocialMedia>
+      )}
     </SocialMediaContainer>
   )
 }
