@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import styled from 'styled-components'
-import {ChevronDown} from 'react-feather'
+import {ChevronRight} from 'react-feather'
 import {Icon} from '../Icon/Icon'
 
 const AccordionWrapper = styled.div<{borderColor?: string}>``
@@ -33,8 +33,7 @@ export const AccordionSelection = styled.div`
 `
 
 type AccordionProps = {
-  activeAccordionText: string | React.ReactNode
-  inactiveAccordionText: string | React.ReactNode
+  accordionText: string | React.ReactNode
   children?: React.ReactNode
   activeColor?: string
   inactiveColor?: string
@@ -43,8 +42,7 @@ type AccordionProps = {
 }
 
 export const Accordion = ({
-  activeAccordionText,
-  inactiveAccordionText,
+  accordionText,
   children,
   activeColor,
   inactiveColor,
@@ -60,20 +58,16 @@ export const Accordion = ({
         clickableMargin={clickableMargin}
         width={width}
       >
-        {isOpen ? (
-          <AccordionText color={activeColor}>{activeAccordionText}</AccordionText>
-        ) : (
-          <AccordionText color={inactiveColor}>{inactiveAccordionText}</AccordionText>
-        )}
         <Icon
           size={16}
           clickable={true}
-          margin={'auto 0 auto auto'}
+          margin={'auto 0'}
           color={isOpen ? activeColor : inactiveColor}
-          transform={isOpen ? 'rotate(180deg)' : ''}
+          transform={isOpen ? 'rotate(90deg)' : ''}
         >
-          <ChevronDown height={16} width={16} />
+          <ChevronRight height={16} width={16} />
         </Icon>
+        <AccordionText color={activeColor}>{accordionText}</AccordionText>
       </ClickableDropdown>
       <Content isOpen={isOpen}>{children}</Content>
     </AccordionWrapper>
