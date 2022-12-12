@@ -13,6 +13,8 @@ const ProfileWrapper = styled.div`
   display: flex;
   flex-direction: row;
   background: white;
+  border-radius: 64px;
+  padding: 16px 48px;
 `
 
 const ProfileIcon = styled.div`
@@ -20,6 +22,7 @@ const ProfileIcon = styled.div`
   width: 100px;
   border-radius: 50%;
   border: 3px solid #16c0f5;
+  margin-right: 16px;
 `
 
 const ProfileDescription = styled.div`
@@ -27,11 +30,14 @@ const ProfileDescription = styled.div`
   flex-direction: column;
 `
 
-const Name = styled.div``
+const Name = styled.div`
+  color: black;
+`
 
 const SocialMediaContainer = styled.div`
   display: flex;
   flex-direction: row;
+  color: black;
 `
 
 const Expertise = styled.div``
@@ -46,6 +52,7 @@ interface UserProfileProps {
 const SpecificSocialMedia = styled.div`
   display: flex;
   flex-direction: row;
+  margin-right: 8px;
 `
 
 const SocialMediaName = styled.div`
@@ -73,24 +80,25 @@ const UserSocialMedia = ({twitter_handle, github_handle, medium_handle}: UserSoc
   const GithubProfileLink = github_handle ? SocialMediaPrefixes.GITHUB + github_handle : undefined
   const MediumProfileLink = medium_handle ? SocialMediaPrefixes.MEDIUM + medium_handle : undefined
 
+  console.log('TwitterProfileLink: ', TwitterProfileLink)
   return (
     <SocialMediaContainer>
-      {TwitterProfileLink ?? (
+      {TwitterProfileLink && (
         <SpecificSocialMedia>
           <SocialMediaName>twitter: </SocialMediaName>
-          <ClickableUserHandle href={TwitterProfileLink}></ClickableUserHandle>
+          <ClickableUserHandle href={TwitterProfileLink}>@{twitter_handle}</ClickableUserHandle>
         </SpecificSocialMedia>
       )}
-      {GithubProfileLink ?? (
+      {GithubProfileLink && (
         <SpecificSocialMedia>
           <SocialMediaName>github: </SocialMediaName>
-          <ClickableUserHandle href={GithubProfileLink}></ClickableUserHandle>
+          <ClickableUserHandle href={GithubProfileLink}>@{github_handle}</ClickableUserHandle>
         </SpecificSocialMedia>
       )}
-      {MediumProfileLink ?? (
+      {MediumProfileLink && (
         <SpecificSocialMedia>
           <SocialMediaName>medium: </SocialMediaName>
-          <ClickableUserHandle href={MediumProfileLink}></ClickableUserHandle>
+          <ClickableUserHandle href={MediumProfileLink}>@{medium_handle}</ClickableUserHandle>
         </SpecificSocialMedia>
       )}
     </SocialMediaContainer>
@@ -103,7 +111,11 @@ const UserProfile = ({name, twitter_handle, github_handle, medium_handle}: UserP
       <ProfileIcon></ProfileIcon>
       <ProfileDescription>
         <Name>{name}</Name>
-        <UserSocialMedia />
+        <UserSocialMedia
+          twitter_handle={twitter_handle}
+          github_handle={github_handle}
+          medium_handle={medium_handle}
+        />
         <Expertise></Expertise>
       </ProfileDescription>
     </ProfileWrapper>
@@ -114,7 +126,7 @@ function About() {
   return (
     <PageWrapper>
       <SectionContainer>
-        <SectionTitle text="About"></SectionTitle>
+        <SectionTitle text="About" />
         <SectionParagraph>
           Odis is a collective of crypto-native developers, product managers, investors, and
           community experts with past experiences working in both the large scale web2 software
@@ -136,6 +148,13 @@ function About() {
           on both sides of the table and has the expertise to steer any Web3 startup in the right
           direction.
         </SectionParagraph>
+        <SectionTitle text="Core Team" />
+        <UserProfile
+          name="Lorem Ipsum"
+          twitter_handle="randomtwitter"
+          github_handle="randomgithub"
+          medium_handle="randommedium"
+        />
       </SectionContainer>
     </PageWrapper>
   )
