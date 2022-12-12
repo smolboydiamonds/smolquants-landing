@@ -80,25 +80,30 @@ const UserSocialMedia = ({twitter_handle, github_handle, medium_handle}: UserSoc
   const GithubProfileLink = github_handle ? SocialMediaPrefixes.GITHUB + github_handle : undefined
   const MediumProfileLink = medium_handle ? SocialMediaPrefixes.MEDIUM + medium_handle : undefined
 
-  console.log('TwitterProfileLink: ', TwitterProfileLink)
   return (
     <SocialMediaContainer>
       {TwitterProfileLink && (
         <SpecificSocialMedia>
           <SocialMediaName>twitter: </SocialMediaName>
-          <ClickableUserHandle href={TwitterProfileLink}>@{twitter_handle}</ClickableUserHandle>
+          <ClickableUserHandle href={TwitterProfileLink} target="_blank" rel="noopener noreferrer">
+            @{twitter_handle}
+          </ClickableUserHandle>
         </SpecificSocialMedia>
       )}
       {GithubProfileLink && (
         <SpecificSocialMedia>
           <SocialMediaName>github: </SocialMediaName>
-          <ClickableUserHandle href={GithubProfileLink}>@{github_handle}</ClickableUserHandle>
+          <ClickableUserHandle href={GithubProfileLink} target="_blank" rel="noopener noreferrer">
+            @{github_handle}
+          </ClickableUserHandle>
         </SpecificSocialMedia>
       )}
       {MediumProfileLink && (
         <SpecificSocialMedia>
           <SocialMediaName>medium: </SocialMediaName>
-          <ClickableUserHandle href={MediumProfileLink}>@{medium_handle}</ClickableUserHandle>
+          <ClickableUserHandle href={MediumProfileLink} target="_blank" rel="noopener noreferrer">
+            @{medium_handle}
+          </ClickableUserHandle>
         </SpecificSocialMedia>
       )}
     </SocialMediaContainer>
