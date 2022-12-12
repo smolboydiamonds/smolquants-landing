@@ -18,7 +18,7 @@ interface SectionTitleProps {
 }
 
 export const SectionTitle = ({text}: SectionTitleProps) => {
-  return <Title>// {text}</Title>
+  return <Title>{text}</Title>
 }
 
 export const SectionParagraph = styled.div`

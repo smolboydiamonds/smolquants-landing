@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {SectionContainer, SectionTitle, SectionParagraph} from '../components/Section/Section'
+
 const PageWrapper = styled.div`
   max-width: 1600px;
   margin: 0 auto;

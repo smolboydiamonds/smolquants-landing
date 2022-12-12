@@ -23,7 +23,7 @@ const Line = styled.div`
   height: 1px;
   width: auto;
   background: #fff;
-  margin: 18px;
+  margin: 18px 0;
 `
 
 const Description = styled.div`
