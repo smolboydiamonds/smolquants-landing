@@ -95,6 +95,37 @@ const inactiveStyle = {
   margin: 'auto 9px',
 }
 
+function Routes() {
+  return (
+    <>
+      <NavLink
+        to={NavigationRoutes.ABOUT}
+        style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+      >
+        {NavigationText.ABOUT}
+      </NavLink>
+      <NavLink
+        to={NavigationRoutes.SERVICES}
+        style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+      >
+        {NavigationText.SERVICES}
+      </NavLink>
+      <NavLink
+        to={NavigationRoutes.MEMBERS}
+        style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+      >
+        {NavigationText.MEMBERS}
+      </NavLink>
+      <NavLink
+        to={NavigationRoutes.CLIENTS}
+        style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+      >
+        {NavigationText.CLIENTS}
+      </NavLink>
+    </>
+  )
+}
+
 export default function Header() {
   const navigate = useNavigate()
   const redirectToHome: () => void = () => navigate('/')
@@ -105,32 +136,7 @@ export default function Header() {
         <LeftCorner>
           <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
         </LeftCorner>
-        <NavigationPanel>
-          <NavLink
-            to={NavigationRoutes.ABOUT}
-            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-          >
-            {NavigationText.ABOUT}
-          </NavLink>
-          <NavLink
-            to={NavigationRoutes.SERVICES}
-            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-          >
-            {NavigationText.SERVICES}
-          </NavLink>
-          <NavLink
-            to={NavigationRoutes.MEMBERS}
-            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-          >
-            {NavigationText.MEMBERS}
-          </NavLink>
-          <NavLink
-            to={NavigationRoutes.CLIENTS}
-            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-          >
-            {NavigationText.CLIENTS}
-          </NavLink>
-        </NavigationPanel>
+        <NavigationPanel>{Routes()}</NavigationPanel>
         <RightCorner>
           <CTAButton>Connect // Build with us</CTAButton>
         </RightCorner>
@@ -140,32 +146,7 @@ export default function Header() {
         <LeftCorner>
           <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
         </LeftCorner>
-        <SlideMenu right>
-          <NavLink
-            to={NavigationRoutes.ABOUT}
-            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-          >
-            {NavigationText.ABOUT}
-          </NavLink>
-          <NavLink
-            to={NavigationRoutes.SERVICES}
-            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-          >
-            {NavigationText.SERVICES}
-          </NavLink>
-          <NavLink
-            to={NavigationRoutes.MEMBERS}
-            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-          >
-            {NavigationText.MEMBERS}
-          </NavLink>
-          <NavLink
-            to={NavigationRoutes.CLIENTS}
-            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-          >
-            {NavigationText.CLIENTS}
-          </NavLink>
-        </SlideMenu>
+        <SlideMenu right>{Routes()}</SlideMenu>
       </MobileView>
     </HeaderContainer>
   )
