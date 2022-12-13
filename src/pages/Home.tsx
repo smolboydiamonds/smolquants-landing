@@ -4,9 +4,14 @@ import {Hero} from '../components/Hero/Hero'
 
 const PageWrapper = styled.div`
   max-width: 1600px;
-  margin: 0 auto;
-  width: 100%;
-  flex: 1;
+  margin: auto;
+  height: 100%;
+  padding: 20px;
+
+  ${({theme}) => theme.mediaWidth.minSmall`
+     margin: 0 auto;
+     flex: 1;
+`}}
 `
 
 function Home() {

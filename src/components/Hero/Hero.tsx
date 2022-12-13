@@ -8,7 +8,11 @@ const Container = styled.div`
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: bold;
   text-align: center;
-  margin: 25vh auto auto;
+  margin: auto;
+
+  ${({theme}) => theme.mediaWidth.minSmall`
+    margin: 25vh auto auto;
+`}}
 `
 
 const Header = styled.div`
@@ -27,8 +31,12 @@ const Line = styled.div`
 `
 
 const Description = styled.div`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
+
+  ${({theme}) => theme.mediaWidth.minSmall`
+    font-size: 16px;
+`}}
 `
 
 const Highlight = styled.a`
