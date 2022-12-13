@@ -91,55 +91,6 @@ const inactiveStyle = {
   margin: 'auto 9px',
 }
 
-const styles = {
-  bmBurgerButton: {
-    position: 'fixed',
-    width: '36px',
-    height: '30px',
-    right: '36px',
-    top: '36px',
-  },
-  bmBurgerBars: {
-    background: '#373a47',
-  },
-  bmBurgerBarsHover: {
-    background: '#a90000',
-  },
-  bmCrossButton: {
-    height: '24px',
-    width: '24px',
-  },
-  bmCross: {
-    background: '#bdc3c7',
-  },
-  bmMenuWrap: {
-    position: 'fixed',
-    height: '100%',
-    top: '0px',
-  },
-  bmMenu: {
-    background: 'black',
-    padding: '2.5em 1.5em 0',
-    fontSize: '1.15em',
-    borderLeft: '3px solid #16c0f5',
-  },
-  bmMorphShape: {
-    fill: '#373a47',
-  },
-  bmItemList: {
-    color: '#b8b7ad',
-    padding: '0.8em',
-  },
-  bmItem: {
-    display: 'inline-block',
-    color: 'white',
-    textDecoration: 'none',
-  },
-  bmOverlay: {
-    background: 'rgba(0, 0, 0, 0.3)',
-  },
-}
-
 export default function Header() {
   const navigate = useNavigate()
   const redirectToHome: () => void = () => navigate('/')
@@ -185,12 +136,30 @@ export default function Header() {
         <LeftCorner>
           <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
         </LeftCorner>
-        <SlideMenu styles={styles} right>
+        <SlideMenu right>
           <NavLink
             to={NavigationRoutes.ABOUT}
             style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
           >
             {NavigationText.ABOUT}
+          </NavLink>
+          <NavLink
+            to={NavigationRoutes.SERVICES}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.SERVICES}
+          </NavLink>
+          <NavLink
+            to={NavigationRoutes.MEMBERS}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.MEMBERS}
+          </NavLink>
+          <NavLink
+            to={NavigationRoutes.CLIENTS}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.CLIENTS}
           </NavLink>
         </SlideMenu>
       </MobileView>
