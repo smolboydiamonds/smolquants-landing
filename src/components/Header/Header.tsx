@@ -16,6 +16,14 @@ const CornerContainer = styled.div`
   width: 200px;
 `
 
+const RightCorner = styled(CornerContainer)`
+  margin-left: auto;
+`
+
+const LeftCorner = styled(CornerContainer)`
+  margin-right: auto;
+`
+
 const BrandLogo = styled.div`
   font-size: 30px;
   font-weight: 700;
@@ -131,9 +139,9 @@ export default function Header() {
           {NavigationText.ABOUT}
         </NavLink>
       </StyledSlideMenu>
-      <CornerContainer>
+      <LeftCorner>
         <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
-      </CornerContainer>
+      </LeftCorner>
       <NavigationPanel>
         <NavLink
           to={NavigationRoutes.ABOUT}
@@ -160,9 +168,9 @@ export default function Header() {
           {NavigationText.CLIENTS}
         </NavLink>
       </NavigationPanel>
-      <CornerContainer>
+      <RightCorner>
         <CTAButton>Connect // Build with us</CTAButton>
-      </CornerContainer>
+      </RightCorner>
     </HeaderContainer>
   )
 }
