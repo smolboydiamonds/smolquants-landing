@@ -6,8 +6,9 @@ import {Icon} from '../Icon/Icon'
 const AccordionWrapper = styled.div<{borderColor?: string}>``
 
 const AccordionText = styled.div<{color?: string}>`
+  font-family: 'Noto Sans JP', sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   margin: 12px 6px 12px 0px;
   color: ${({color}) => color};
 `
@@ -24,6 +25,7 @@ const Content = styled.div<{isOpen: boolean}>`
   overflow: hidden;
   display: block;
   padding-left: ${({isOpen}) => (isOpen ? '16px' : 'auto')};
+  border-left: 1px solid white;
 `
 
 export const AccordionSelection = styled.div`
@@ -65,7 +67,7 @@ export const Accordion = ({
           color={isOpen ? activeColor : inactiveColor}
           transform={isOpen ? 'rotate(90deg)' : ''}
         >
-          <ChevronRight height={16} width={16} />
+          <ChevronRight height={18} width={16} />
         </Icon>
         <AccordionText color={activeColor}>{accordionText}</AccordionText>
       </ClickableDropdown>
