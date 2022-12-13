@@ -31,19 +31,19 @@ const LeftCorner = styled(CornerContainer)`
 const DesktopView = styled.div`
   display: none;
 
-  @media (min-width: 415px) {
+  ${({theme}) => theme.mediaWidth.minSmall`
     display: flex;
     width: 100%;
-  }
+`}}
 `
 
 const MobileView = styled.div`
   display: flex;
   width: 100%;
 
-  @media (min-width: 415px) {
+  ${({theme}) => theme.mediaWidth.minSmall`
     display: none;
-  }
+`}}
 `
 
 const BrandLogo = styled.div`
