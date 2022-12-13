@@ -118,9 +118,10 @@ const styles = {
     top: '0px',
   },
   bmMenu: {
-    background: '#373a47',
+    background: 'black',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
+    borderLeft: '3px solid #16c0f5',
   },
   bmMorphShape: {
     fill: '#373a47',
@@ -131,6 +132,8 @@ const styles = {
   },
   bmItem: {
     display: 'inline-block',
+    color: 'white',
+    textDecoration: 'none',
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)',
