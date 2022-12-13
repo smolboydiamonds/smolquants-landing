@@ -1,3 +1,4 @@
+import React, {useMemo} from 'react'
 import styled, {
   css,
   DefaultTheme,
@@ -26,4 +27,12 @@ export function theme(): DefaultTheme {
   return {
     mediaWidth: mediaWidthTemplates,
   }
+}
+
+export default function ThemeProvider({children}: {children: React.ReactNode}) {
+  const themeObject = useMemo(() => theme(), [])
+
+  return (
+    <StyledComponentsThemeProvider theme={themeObject}>{children}</StyledComponentsThemeProvider>
+  )
 }

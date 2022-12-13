@@ -8,7 +8,11 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   font-family: 'Lexend Deca', sans-serif;
   justify-content: space-between;
-  margin: 48px 48px 0;
+  margin: 32px 32px 0;
+
+  ${({theme}) => theme.mediaWidth.minSmall`
+      margin: 48px 48px 0;
+  `}}
 `
 
 const CornerContainer = styled.div`
