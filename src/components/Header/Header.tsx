@@ -24,6 +24,24 @@ const LeftCorner = styled(CornerContainer)`
   margin-right: auto;
 `
 
+const DesktopView = styled.div`
+  display: none;
+
+  @media (min-width: 415px) {
+    display: flex;
+    width: 100%;
+  }
+`
+
+const MobileView = styled.div`
+  display: flex;
+  width: 100%;
+
+  @media (min-width: 415px) {
+    display: none;
+  }
+`
+
 const BrandLogo = styled.div`
   font-size: 30px;
   font-weight: 700;
@@ -72,12 +90,6 @@ const inactiveStyle = {
   color: '#ffffff',
   margin: 'auto 9px',
 }
-
-const StyledSlideMenu = styled(SlideMenu)`
-  @media (min-width: 415px) {
-    display: none;
-  }
-`
 
 const styles = {
   bmBurgerButton: {
@@ -131,46 +143,54 @@ export default function Header() {
 
   return (
     <HeaderContainer>
-      <StyledSlideMenu styles={styles} right>
-        <NavLink
-          to={NavigationRoutes.ABOUT}
-          style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-        >
-          {NavigationText.ABOUT}
-        </NavLink>
-      </StyledSlideMenu>
-      <LeftCorner>
-        <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
-      </LeftCorner>
-      <NavigationPanel>
-        <NavLink
-          to={NavigationRoutes.ABOUT}
-          style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-        >
-          {NavigationText.ABOUT}
-        </NavLink>
-        <NavLink
-          to={NavigationRoutes.SERVICES}
-          style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-        >
-          {NavigationText.SERVICES}
-        </NavLink>
-        <NavLink
-          to={NavigationRoutes.MEMBERS}
-          style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-        >
-          {NavigationText.MEMBERS}
-        </NavLink>
-        <NavLink
-          to={NavigationRoutes.CLIENTS}
-          style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-        >
-          {NavigationText.CLIENTS}
-        </NavLink>
-      </NavigationPanel>
-      <RightCorner>
-        <CTAButton>Connect // Build with us</CTAButton>
-      </RightCorner>
+      <DesktopView>
+        <LeftCorner>
+          <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
+        </LeftCorner>
+        <NavigationPanel>
+          <NavLink
+            to={NavigationRoutes.ABOUT}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.ABOUT}
+          </NavLink>
+          <NavLink
+            to={NavigationRoutes.SERVICES}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.SERVICES}
+          </NavLink>
+          <NavLink
+            to={NavigationRoutes.MEMBERS}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.MEMBERS}
+          </NavLink>
+          <NavLink
+            to={NavigationRoutes.CLIENTS}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.CLIENTS}
+          </NavLink>
+        </NavigationPanel>
+        <RightCorner>
+          <CTAButton>Connect // Build with us</CTAButton>
+        </RightCorner>
+      </DesktopView>
+
+      <MobileView>
+        <LeftCorner>
+          <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
+        </LeftCorner>
+        <SlideMenu styles={styles} right>
+          <NavLink
+            to={NavigationRoutes.ABOUT}
+            style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
+          >
+            {NavigationText.ABOUT}
+          </NavLink>
+        </SlideMenu>
+      </MobileView>
     </HeaderContainer>
   )
 }
