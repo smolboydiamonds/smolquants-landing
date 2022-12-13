@@ -9,8 +9,8 @@ const PageWrapper = styled.div`
   padding: 20px;
 
   ${({theme}) => theme.mediaWidth.minSmall`
-     margin: 0 auto;
-     flex: 1;
+    margin: 0 auto;
+    flex: 1;
 `}}
 `
 
