@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import ThemeProvider from '../theme/theme'
+import ThemeProvider from './theme/theme'
 import {HashRouter} from 'react-router-dom'
 import './index.css'
 import App from './App'
