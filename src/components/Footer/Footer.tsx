@@ -6,8 +6,12 @@ import {Twitter, GitHub} from 'react-feather'
 const FooterContainer = styled.footer`
   display: flex;
   flex-direction: row;
-  margin: 48px;
+  margin: 32px;
   justify-content: space-between;
+
+  ${({theme}) => theme.mediaWidth.minSmall`
+    margin: 48px
+`}}
 `
 
 const Copyright = styled.div`
@@ -15,6 +19,7 @@ const Copyright = styled.div`
   margin-right: auto;
   font-family: 'Lexend Deca', sans-serif;
   font-weight: 600;
+  line-height: 2;
 `
 
 const SocialMediaContainer = styled.div`

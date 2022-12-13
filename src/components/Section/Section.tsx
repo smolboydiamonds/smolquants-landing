@@ -3,7 +3,11 @@ import styled from 'styled-components'
 export const SectionContainer = styled.div`
   max-width: 850px;
   border-top: 1px solid #fff;
+  margin: 50px 20px auto;
+
+  ${({theme}) => theme.mediaWidth.minSmall`
   margin: 70px auto auto;
+`}}
 `
 
 const Title = styled.div`
