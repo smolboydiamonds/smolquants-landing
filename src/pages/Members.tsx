@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const PageWrapper = styled.div`
@@ -8,8 +7,27 @@ const PageWrapper = styled.div`
   flex: 1;
 `
 
+export const PlaceholderContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+`
+
+export const PlaceholderText = styled.div`
+  margin: 33vh auto auto;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 20px;
+  color: white;
+`
+
 function Members() {
-  return <PageWrapper></PageWrapper>
+  return (
+    <PageWrapper>
+      <PlaceholderContainer>
+        <PlaceholderText>coming soon</PlaceholderText>
+      </PlaceholderContainer>
+    </PageWrapper>
+  )
 }
 
 export default Members

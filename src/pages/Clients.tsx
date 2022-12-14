@@ -1,5 +1,5 @@
-import React from 'react'
 import styled from 'styled-components'
+import {PlaceholderText, PlaceholderContainer} from './Members'
 
 const PageWrapper = styled.div`
   max-width: 1600px;
@@ -9,7 +9,13 @@ const PageWrapper = styled.div`
 `
 
 function Clients() {
-  return <PageWrapper></PageWrapper>
+  return (
+    <PageWrapper>
+      <PlaceholderContainer>
+        <PlaceholderText>coming soon</PlaceholderText>
+      </PlaceholderContainer>
+    </PageWrapper>
+  )
 }
 
 export default Clients
