@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const SectionContainer = styled.div`
   max-width: 850px;
   border-top: 1px solid #fff;
-  margin: 50px 20px auto;
+  margin: 25px 20px auto;
 
   ${({theme}) => theme.mediaWidth.minSmall`
   margin: 70px auto auto;
@@ -14,7 +14,7 @@ const Title = styled.div`
   font-size: 24px;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: bold;
-  margin: 16px 0;
+  margin: 20px 0;
 `
 
 interface SectionTitleProps {
