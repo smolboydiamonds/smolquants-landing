@@ -36,9 +36,11 @@ const ProfileDescription = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 4px;
+  margin-bottom: 5px;
 
   ${({theme}) => theme.mediaWidth.minSmall`
     margin-top: 8px;
+    margin-bottom: 10px;
   `}}
 `
 
@@ -54,7 +56,7 @@ const SocialMediaContainer = styled.div`
 
 const Expertise = styled.div`
   color: black;
-  margin-top: 8px;
+  margin-top: auto;
   font-size: 12px;
 
   ${({theme}) => theme.mediaWidth.minSmall`
