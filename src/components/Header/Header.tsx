@@ -133,11 +133,11 @@ function Routes() {
 export default function Header() {
   const [open, setOpen] = useState(false)
   const navigate = useNavigate()
-  let location = useLocation().pathname
-
   const redirectToHome: () => void = () => navigate('/')
 
   // close menu when at new route
+  let location = useLocation().pathname
+
   useEffect(() => {
     if (open) {
       setOpen(open => false)

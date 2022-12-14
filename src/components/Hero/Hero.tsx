@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {CTAButton} from '../Header/Header'
+import {StyledCTAButton} from '../Button/Button'
 
 const Container = styled.div`
   display: flex;
@@ -43,9 +43,9 @@ const Highlight = styled.a`
   color: #16c0f5;
 `
 
-const HeroButton = styled(CTAButton)`
+const HeroButtonWrapper = styled.div`
   width: 225px;
-  margin: 18px auto;
+  margin: 20px auto;
 `
 
 enum HeroText {
@@ -64,7 +64,9 @@ export const Hero = () => {
       </Subheader>
       <Line />
       <Description>{HeroText.DESCRIPTION}</Description>
-      <HeroButton>Connect // Build with us</HeroButton>
+      <HeroButtonWrapper>
+        <StyledCTAButton>Connect // Build with us</StyledCTAButton>
+      </HeroButtonWrapper>
     </Container>
   )
 }
