@@ -20,7 +20,7 @@ const HeaderContainer = styled.div`
 
 const CornerContainer = styled.div`
   display: flex;
-  width: 200px;
+  width: 225px;
   border-radius: 64px;
 `
 

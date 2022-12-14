@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SectionContainer = styled.div`
-  max-width: 850px;
+  max-width: 800px;
   border-top: 1px solid #fff;
   margin: 25px 20px auto;
 

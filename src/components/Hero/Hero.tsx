@@ -11,7 +11,7 @@ const Container = styled.div`
   margin: auto;
 
   ${({theme}) => theme.mediaWidth.minSmall`
-    margin: 25vh auto auto;
+    margin: 23vh auto auto;
 `}}
 `
 
