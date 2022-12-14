@@ -143,7 +143,7 @@ export default function Header() {
     if (open) {
       setOpen(open => false)
     }
-  }, [location])
+  }, [location, open])
 
   function handleOnOpen(): void {
     setOpen(open => true)
