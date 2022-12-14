@@ -15,6 +15,7 @@ const BulletPointContainer = styled.div`
   flex-direction: row;
   margin-bottom: 16px;
   font-family: 'Noto Sans JP', sans-serif;
+  padding-right: 30px;
 `
 
 const Bullet = styled.div`
