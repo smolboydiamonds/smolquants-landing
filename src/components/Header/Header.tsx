@@ -1,5 +1,6 @@
+import {useState, useEffect} from 'react'
 import styled from 'styled-components'
-import {NavLink, useNavigate} from 'react-router-dom'
+import {NavLink, useNavigate, useLocation} from 'react-router-dom'
 import {slide as SlideMenu} from 'react-burger-menu'
 import './SlideMenu.css'
 
@@ -127,8 +128,22 @@ function Routes() {
 }
 
 export default function Header() {
+  const [open, setOpen] = useState(false)
   const navigate = useNavigate()
+  let location = useLocation().pathname
+
   const redirectToHome: () => void = () => navigate('/')
+
+  // close menu when at new route
+  useEffect(() => {
+    if (open) {
+      setOpen(open => false)
+    }
+  }, [location])
+
+  function handleOnOpen(): void {
+    setOpen(open => true)
+  }
 
   return (
     <HeaderContainer>
@@ -146,7 +161,9 @@ export default function Header() {
         <LeftCorner>
           <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
         </LeftCorner>
-        <SlideMenu right>{Routes()}</SlideMenu>
+        <SlideMenu isOpen={open} onOpen={handleOnOpen} right>
+          {Routes()}
+        </SlideMenu>
       </MobileView>
     </HeaderContainer>
   )
