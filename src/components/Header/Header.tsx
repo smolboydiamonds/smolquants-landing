@@ -156,7 +156,7 @@ export default function Header() {
         </LeftCorner>
         <NavigationPanel>{Routes()}</NavigationPanel>
         <RightCorner>
-          <StyledCTAButton>Connect // Build with us</StyledCTAButton>
+          <StyledCTAButton>Connect // Build With Us</StyledCTAButton>
         </RightCorner>
       </DesktopView>
 

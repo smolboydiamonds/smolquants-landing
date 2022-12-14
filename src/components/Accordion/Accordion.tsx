@@ -8,7 +8,7 @@ const AccordionWrapper = styled.div<{borderColor?: string}>``
 const AccordionText = styled.div<{color?: string}>`
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   margin: 12px 6px 12px 0px;
   color: ${({color}) => color};
 `

@@ -10,12 +10,19 @@ const PageWrapper = styled.div`
   flex: 1;
 `
 
+const PrimaryParagraph = styled(SectionParagraph)`
+  background: #373a47;
+  padding: 9px 12px;
+  border-radius: 20px;
+`
+
 const BulletPointContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 16px;
   font-family: 'Noto Sans JP', sans-serif;
   padding-right: 30px;
+  margin-left: 11px;
 `
 
 const Bullet = styled.div`
@@ -58,10 +65,10 @@ function Services() {
         <SectionParagraph>Services Include:</SectionParagraph>
 
         <Accordion accordionText={'Business Development & Partnerships'}>
-          <SectionParagraph>
+          <PrimaryParagraph>
             Focus on building your product and hiring technical talent — our team will serve as an
             extension of your core team with business development and partnership support.
-          </SectionParagraph>
+          </PrimaryParagraph>
           <BulletPoint>
             Warm introductions to ecosystem and protocol partners. No more having to send cold
             messages and getting ghosted — we are, at most, 1 degree of separation form anyone in
@@ -77,10 +84,10 @@ function Services() {
         </Accordion>
 
         <Accordion accordionText={'Fundraising Strategy'}>
-          <SectionParagraph>
+          <PrimaryParagraph>
             As builders and investors that have sat through 1,000+ pitches, we can help you
             strategize and position your team for the best chances at securing capital.
-          </SectionParagraph>
+          </PrimaryParagraph>
           <BulletPoint>
             Direct introductions to the team’s vast network of 100+ VC’s, Angels, and Market Markers
             (i.e., a16z, GoldenTree, Dragonfly, Polychain, Framework, Jump, GSR, Fenbushi, Steel
@@ -91,10 +98,10 @@ function Services() {
         </Accordion>
 
         <Accordion accordionText={'Governance Advisory'}>
-          <SectionParagraph>
+          <PrimaryParagraph>
             Focus on building your product and hiring technical talent — our team will serve as an
             extension of your core team with business development and partnership support.
-          </SectionParagraph>
+          </PrimaryParagraph>
           <BulletPoint>
             Warm introductions to ecosystem and protocol partners. No more having to send cold
             messages and getting ghosted — we are, at most, 1 degree of separation form anyone in

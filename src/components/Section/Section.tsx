@@ -6,8 +6,8 @@ export const SectionContainer = styled.div`
   margin: 25px 20px auto;
 
   ${({theme}) => theme.mediaWidth.minSmall`
-  margin: 70px auto auto;
-`}}
+    margin: 70px auto auto;
+  `}}
 `
 
 const Title = styled.div`
@@ -15,6 +15,10 @@ const Title = styled.div`
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: bold;
   margin: 20px 0;
+
+  ${({theme}) => theme.mediaWidth.minSmall`
+    margin: 16px 0;
+  `}}
 `
 
 interface SectionTitleProps {

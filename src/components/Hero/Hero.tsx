@@ -44,7 +44,7 @@ const Highlight = styled.a`
 `
 
 const HeroButtonWrapper = styled.div`
-  width: 225px;
+  width: 250px;
   margin: 20px auto;
 `
 
@@ -65,7 +65,7 @@ export const Hero = () => {
       <Line />
       <Description>{HeroText.DESCRIPTION}</Description>
       <HeroButtonWrapper>
-        <StyledCTAButton>Connect // Build with us</StyledCTAButton>
+        <StyledCTAButton>Connect // Build With Us</StyledCTAButton>
       </HeroButtonWrapper>
     </Container>
   )
