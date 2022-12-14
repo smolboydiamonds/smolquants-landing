@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const ProfileWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  background: white;
+  background: #1e2021;
   border-radius: 64px;
   padding: 20px;
   margin: 24px 0;
@@ -20,6 +20,8 @@ const ProfileWrapper = styled.div`
 const InnerWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  color: white;
+  height: 100%;
 `
 
 const ProfileIcon = styled.div`
@@ -29,7 +31,7 @@ const ProfileIcon = styled.div`
   max-height: 100px;
   border-radius: 50%;
   border: 3px solid #16c0f5;
-  margin-right: 16px;
+  margin: auto 16px auto auto;
 `
 
 const ProfileDescription = styled.div`
@@ -37,29 +39,28 @@ const ProfileDescription = styled.div`
   flex-direction: column;
   margin-top: 4px;
   margin-bottom: 5px;
+  
 
   ${({theme}) => theme.mediaWidth.minSmall`
     margin-top: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   `}}
 `
 
 const Name = styled.div`
   font-family: 'Lexend Deca', sans-serif;
-  color: black;
-  font-weight: 700;
+  font-weight: 600;
 `
 
 const SocialMediaContainer = styled.div`
   display: flex;
   flex-direction: row;
-  color: black;
 `
 
 const Expertise = styled.div`
-  color: black;
   margin-top: auto;
   font-size: 12px;
+  padding-top: 16px;  
 
   ${({theme}) => theme.mediaWidth.minSmall`
     font-size: 14px;
