@@ -45,7 +45,9 @@ const ProfileDescription = styled.div`
 `
 
 const Name = styled.div`
+  font-family: 'Lexend Deca', sans-serif;
   color: black;
+  font-weight: 700;
 `
 
 const SocialMediaContainer = styled.div`
@@ -70,14 +72,11 @@ const SpecificSocialMedia = styled.div`
   margin-right: 8px;
 `
 
-const SocialMediaName = styled.div`
-  font-weight: bold;
-`
+const SocialMediaName = styled.div``
 
 const ClickableUserHandle = styled.a`
   text-decoration: none;
-  font-weight: normal;
-  color: black;
+  color: #1fb2e2;
 `
 
 interface UserSocialMediaProps {
