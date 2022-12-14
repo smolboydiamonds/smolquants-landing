@@ -5,9 +5,21 @@ const ProfileWrapper = styled.div`
   flex-direction: row;
   background: white;
   border-radius: 64px;
-  padding: 16px 48px;
+  padding: 20px;
   margin: 24px 0;
   font-family: 'Noto San JP', sans-serif;
+  font-size: 14px;
+  border: 2px solid #16c0f5;
+  
+  ${({theme}) => theme.mediaWidth.minSmall`
+    font-size: 16px;  
+    padding: 16px 48px;
+  `}}
+`
+
+const InnerWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
 `
 
 const ProfileIcon = styled.div`
@@ -23,7 +35,11 @@ const ProfileIcon = styled.div`
 const ProfileDescription = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 8px;
+  margin-top: 4px;
+
+  ${({theme}) => theme.mediaWidth.minSmall`
+    margin-top: 8px;
+  `}}
 `
 
 const Name = styled.div`
@@ -38,8 +54,12 @@ const SocialMediaContainer = styled.div`
 
 const Expertise = styled.div`
   color: black;
-  margin-top: 32px;
-  font-size: 14px;
+  margin-top: 8px;
+  font-size: 12px;
+
+  ${({theme}) => theme.mediaWidth.minSmall`
+    font-size: 14px;
+  `}}
 `
 
 const SpecificSocialMedia = styled.div`
@@ -124,16 +144,18 @@ export const UserProfile = ({
 }: UserProfileProps) => {
   return (
     <ProfileWrapper>
-      <ProfileIcon></ProfileIcon>
-      <ProfileDescription>
-        <Name>{name}</Name>
-        <UserSocialMedia
-          twitter_handle={twitter_handle}
-          github_handle={github_handle}
-          medium_handle={medium_handle}
-        />
-        <Expertise>Expertise: {expertise} </Expertise>
-      </ProfileDescription>
+      <InnerWrapper>
+        <ProfileIcon></ProfileIcon>
+        <ProfileDescription>
+          <Name>{name}</Name>
+          <UserSocialMedia
+            twitter_handle={twitter_handle}
+            github_handle={github_handle}
+            medium_handle={medium_handle}
+          />
+          <Expertise>Expertise: {expertise} </Expertise>
+        </ProfileDescription>
+      </InnerWrapper>
     </ProfileWrapper>
   )
 }
