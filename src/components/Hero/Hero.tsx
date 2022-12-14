@@ -45,6 +45,7 @@ const Highlight = styled.a`
 
 const HeroButtonWrapper = styled.div`
   width: 250px;
+  border-radius: 64px;
   margin: 20px auto;
 `
 

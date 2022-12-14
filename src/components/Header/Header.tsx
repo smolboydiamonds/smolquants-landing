@@ -21,6 +21,7 @@ const HeaderContainer = styled.div`
 const CornerContainer = styled.div`
   display: flex;
   width: 200px;
+  border-radius: 64px;
 `
 
 const RightCorner = styled(CornerContainer)`
