@@ -47,12 +47,12 @@ function Footer() {
     <FooterContainer>
       <Copyright>©2022 Odis. All Rights Reserved.</Copyright>
       <SocialMediaContainer>
-        <Icon size={24} clickable={true} margin="auto 16px auto auto" color="white">
+        <Icon size={24} clickable={true} margin="auto 8px auto auto" color="white">
           <ExternalLink href={SocialMediaLinks.TWITTER} target="_blank" rel="noopener noreferrer">
             <Twitter height={24} width={24} />
           </ExternalLink>
         </Icon>
-        <Icon size={24} clickable={true} margin={'auto 8px'} color="white">
+        <Icon size={24} clickable={true} margin={'auto 0px auto 8px'} color="white">
           <ExternalLink href={SocialMediaLinks.GITHUB} target="_blank" rel="noopener noreferrer">
             <GitHub height={24} width={24} />
           </ExternalLink>
