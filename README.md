@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# ODIS Collective Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Installing
+
+Run ``` npm install ```
 
 ## Available Scripts
 
@@ -44,3 +46,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
