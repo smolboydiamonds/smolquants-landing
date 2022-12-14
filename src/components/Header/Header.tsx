@@ -143,10 +143,14 @@ export default function Header() {
     if (open) {
       setOpen(open => false)
     }
-  }, [location, open])
+  }, [location])
 
   function handleOnOpen(): void {
     setOpen(open => true)
+  }
+
+  function handleOnClose(): void {
+    setOpen(open => false)
   }
 
   return (
@@ -165,7 +169,7 @@ export default function Header() {
         <LeftCorner>
           <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
         </LeftCorner>
-        <SlideMenu isOpen={open} onOpen={handleOnOpen} right>
+        <SlideMenu isOpen={open} onOpen={handleOnOpen} onClose={handleOnClose} right>
           {Routes()}
         </SlideMenu>
       </MobileView>
