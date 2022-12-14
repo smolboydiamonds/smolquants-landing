@@ -2,14 +2,16 @@ import {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {NavLink, useNavigate, useLocation} from 'react-router-dom'
 import {slide as SlideMenu} from 'react-burger-menu'
+import {StyledCTAButton} from '../Button/Button'
+
 import './SlideMenu.css'
 
 const HeaderContainer = styled.div`
+  font-family: 'Lexend Deca', sans-serif;
   display: flex;
   flex-direction: row;
-  font-family: 'Lexend Deca', sans-serif;
-  justify-content: space-between;
   margin: 32px 32px 0;
+  justify-content: space-between;
 
   ${({theme}) => theme.mediaWidth.minSmall`
       margin: 48px 48px 0;
@@ -48,9 +50,9 @@ const MobileView = styled.div`
 `
 
 const BrandLogo = styled.div`
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 30px;
   font-weight: 700;
-  font-family: 'Noto Sans JP', sans-serif;
   letter-spacing: 3px;
   cursor: pointer;
 `
@@ -61,13 +63,14 @@ const NavigationPanel = styled.div`
 `
 
 export const CTAButton = styled.button`
-  background: #16c0f5;
-  border-radius: 16px;
-  color: #fff;
-  border-style: none;
-  font-weight: bold;
   font-family: 'Lexend Deca', sans-serif;
-  padding: 8px 16px;
+  font-weight: bold;
+  padding: 16px;
+  color: #fff;
+  background: #16c0f5;
+  border-radius: 64px;
+  border-style: none;
+  cursor: pointer;
 `
 
 enum NavigationRoutes {
@@ -153,7 +156,7 @@ export default function Header() {
         </LeftCorner>
         <NavigationPanel>{Routes()}</NavigationPanel>
         <RightCorner>
-          <CTAButton>Connect // Build with us</CTAButton>
+          <StyledCTAButton>Connect // Build with us</StyledCTAButton>
         </RightCorner>
       </DesktopView>
 
