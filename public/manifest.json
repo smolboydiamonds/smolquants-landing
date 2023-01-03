@@ -1,0 +1,15 @@
+{
+  "short_name": "ODIS Collective",
+  "name": "a web3 collective",
+  "icons": [
+    {
+      "src": "odis-logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
