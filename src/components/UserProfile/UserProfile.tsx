@@ -135,6 +135,7 @@ export interface UserProfileProps extends UserSocialMediaProps {
   twitter_handle?: string
   github_handle?: string
   medium_handle?: string
+  pfp_src?: string
 }
 
 export const UserProfile = ({
