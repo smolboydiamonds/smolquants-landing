@@ -28,7 +28,7 @@ const ProfileIcon = styled.div<{pfp_src?: string}>`
   background: url(${({pfp_src}) => pfp_src});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   min-height: 100px;
   max-height: 100px;
   min-width: 100px;
