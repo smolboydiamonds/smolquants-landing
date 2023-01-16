@@ -45,6 +45,7 @@ function About() {
             twitter_handle={user.twitter_handle}
             github_handle={user?.github_handle}
             medium_handle={user?.medium_handle}
+            pfp_src={user?.pfp_src}
           />
         ))}
       </SectionContainer>
