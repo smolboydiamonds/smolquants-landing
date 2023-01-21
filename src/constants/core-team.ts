@@ -5,6 +5,9 @@ import Jacob_PFP from '../assets/images/jacob-pfp.jpg'
 import Junney_PFP from '../assets/images/junney-pfp.png'
 import Niall_PFP from '../assets/images/niall-pfp.png'
 import Mike_PFP from '../assets/images/mike-pfp.png'
+import Chris_PFP from '../assets/images/chris-pfp.png'
+import JMak_PFP from '../assets/images/jmak_pfp.jpeg'
+import Sherv_PFP from '../assets/images/sherv_pfp.png'
 
 export const CoreTeamUsers: UserProfileProps[] = [
   {
@@ -28,14 +31,16 @@ export const CoreTeamUsers: UserProfileProps[] = [
     expertise: 'Engineering, Product',
     twitter_handle: 'jonathanjmak',
     github_handle: undefined,
-    medium_handle: undefined
+    medium_handle: undefined,
+    pfp_src: JMak_PFP
   },
   {
     name: 'Sherv',
     expertise: 'Business Development, Fundraising, NFT, Token Distribution & Launch',
     twitter_handle: 'Sherv1n_eth',
     github_handle: undefined,
-    medium_handle: undefined
+    medium_handle: undefined,
+    pfp_src: Sherv_PFP
   },
   {
     name: 'iJackie',
@@ -54,13 +59,6 @@ export const CoreTeamUsers: UserProfileProps[] = [
     pfp_src: Niall_PFP
   },
   {
-    name: '0xElle',
-    expertise: 'Business Development, Community, DAO Ops, Fundraising, NFT',
-    twitter_handle: '0xElle',
-    github_handle: undefined,
-    medium_handle: undefined
-  },
-  {
     name: 'Jacob',
     expertise: 'Engineering, Product',
     twitter_handle: 'jacobmakarsky',
@@ -75,5 +73,13 @@ export const CoreTeamUsers: UserProfileProps[] = [
     github_handle: undefined,
     medium_handle: undefined,
     pfp_src: Junney_PFP
+  },
+  {
+    name: 'Chris',
+    expertise: 'Community, Business Development, Events, NFT',
+    twitter_handle: undefined,
+    github_handle: undefined,
+    medium_handle: undefined,
+    pfp_src: Chris_PFP
   }
 ]
