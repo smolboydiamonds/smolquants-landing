@@ -52,7 +52,7 @@ export const CoreTeamUsers: UserProfileProps[] = [
   },
   {
     name: 'Niall',
-    expertise: 'Engineering, Product',
+    expertise: 'Product, Marketing, Community',
     twitter_handle: 'niallyorke',
     github_handle: undefined,
     medium_handle: undefined,

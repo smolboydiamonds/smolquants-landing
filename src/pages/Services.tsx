@@ -60,7 +60,7 @@ function Services() {
         <SectionParagraph>
           Our team consists of members with strong technical and non-technical backgrounds and
           extensive experience at some of the top Web3 DAOs and companies such as Redacted Cartel,
-          Steel Perlot, Outlier Ventures, Covalent, YGG, GCR, New Order, 8it, and Krause House.
+          Outlier Ventures, Covalent, YGG, GCR, New Order, 8it, and Krause House.
         </SectionParagraph>
         <SectionParagraph>Services Include:</SectionParagraph>
 
