@@ -24,7 +24,11 @@ const InnerWrapper = styled.div`
   height: 100%;
 `
 
-const ProfileIcon = styled.div`
+const ProfileIcon = styled.div<{pfp_src?: string}>`
+  background: url(${({pfp_src}) => pfp_src});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100px;
   max-height: 100px;
   min-width: 100px;
@@ -135,6 +139,7 @@ export interface UserProfileProps extends UserSocialMediaProps {
   twitter_handle?: string
   github_handle?: string
   medium_handle?: string
+  pfp_src?: string
 }
 
 export const UserProfile = ({
@@ -143,11 +148,12 @@ export const UserProfile = ({
   twitter_handle,
   github_handle,
   medium_handle,
+  pfp_src,
 }: UserProfileProps) => {
   return (
     <ProfileWrapper>
       <InnerWrapper>
-        <ProfileIcon></ProfileIcon>
+        <ProfileIcon pfp_src={pfp_src} />
         <ProfileDescription>
           <Name>{name}</Name>
           <UserSocialMedia
