@@ -50,19 +50,15 @@ const HeroButtonWrapper = styled.div`
 `
 
 enum HeroText {
-  HEADER = 'O D I S',
-  DESCRIPTION = `ODIS is an Advisory as a Service (AaaS) collective for Web3 companies and DAO’s. Through our
-  full suite of service offerings, we help founders bootstrap their community and operations
-  to scale on their own.`,
+  HEADER = 'SmolQuants',
+  DESCRIPTION = `Pre-Launch Economic Audits for DeFi Protocols, specializing in DEXs`,
 }
 
 export const Hero = () => {
   return (
     <Container>
       <Header>{HeroText.HEADER}</Header>
-      <Subheader>
-        a web<Highlight>3</Highlight> collective
-      </Subheader>
+      <Subheader>web3 security audits</Subheader>
       <Line />
       <Description>{HeroText.DESCRIPTION}</Description>
       <HeroButtonWrapper>
