@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {NavLink, useNavigate, useLocation} from 'react-router-dom'
 import {slide as SlideMenu} from 'react-burger-menu'
 import {StyledCTAButton} from '../Button/Button'
+import {SMOLQUANTS_LINKS} from '../../constants/links'
 
 import './SlideMenu.css'
 
@@ -161,7 +162,9 @@ export default function Header() {
         </LeftCorner>
         <NavigationPanel>{Routes()}</NavigationPanel>
         <RightCorner>
-          <StyledCTAButton>Connect // Build With Us</StyledCTAButton>
+          <StyledCTAButton href={SMOLQUANTS_LINKS.AIRTABLE}>
+            Connect // Build With Us
+          </StyledCTAButton>
         </RightCorner>
       </DesktopView>
 

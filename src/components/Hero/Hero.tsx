@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {StyledCTAButton} from '../Button/Button'
+import {SMOLQUANTS_LINKS} from '../../constants/links'
 
 const Container = styled.div`
   display: flex;
@@ -40,10 +41,6 @@ const Description = styled.div`
 `}}
 `
 
-const Highlight = styled.a`
-  color: #16c0f5;
-`
-
 const HeroButtonWrapper = styled.div`
   width: 250px;
   border-radius: 64px;
@@ -63,7 +60,7 @@ export const Hero = () => {
       <Line />
       <Description>{HeroText.DESCRIPTION}</Description>
       <HeroButtonWrapper>
-        <StyledCTAButton>Connect // Build With Us</StyledCTAButton>
+        <StyledCTAButton href={SMOLQUANTS_LINKS.AIRTABLE}>Connect // Build With Us</StyledCTAButton>
       </HeroButtonWrapper>
     </Container>
   )
