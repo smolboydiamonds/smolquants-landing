@@ -17,6 +17,7 @@ const Container = styled.div`
 
 const Header = styled.div`
   font-size: 64px;
+  letter-spacing: 5px;
 `
 
 const Subheader = styled.div`

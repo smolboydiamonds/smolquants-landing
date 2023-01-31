@@ -157,7 +157,7 @@ export default function Header() {
     <HeaderContainer>
       <DesktopView>
         <LeftCorner>
-          <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
+          <BrandLogo onClick={redirectToHome}>SmolQuants</BrandLogo>
         </LeftCorner>
         <NavigationPanel>{Routes()}</NavigationPanel>
         <RightCorner>

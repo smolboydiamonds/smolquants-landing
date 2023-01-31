@@ -45,7 +45,7 @@ enum SocialMediaLinks {
 function Footer() {
   return (
     <FooterContainer>
-      <Copyright>©2022 Odis. All Rights Reserved.</Copyright>
+      <Copyright>©2022 SmolQuants. All Rights Reserved.</Copyright>
       <SocialMediaContainer>
         <Icon size={24} clickable={true} margin="auto 8px auto auto" color="white">
           <ExternalLink href={SocialMediaLinks.TWITTER} target="_blank" rel="noopener noreferrer">
