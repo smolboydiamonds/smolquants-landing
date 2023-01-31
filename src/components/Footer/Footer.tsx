@@ -38,8 +38,7 @@ const ExternalLink = styled.a`
 
 enum SocialMediaLinks {
   TWITTER = 'https://twitter.com',
-  GITHUB = 'https://github.com',
-  MIRROR = 'https://mirror.com',
+  GITHUB = 'https://github.com/smolquants',
 }
 
 function Footer() {
