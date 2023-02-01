@@ -170,7 +170,7 @@ export default function Header() {
 
       <MobileView>
         <LeftCorner>
-          <BrandLogo onClick={redirectToHome}>ODIS</BrandLogo>
+          <BrandLogo onClick={redirectToHome}>SmolQuants</BrandLogo>
         </LeftCorner>
         <SlideMenu isOpen={open} onOpen={handleOnOpen} onClose={handleOnClose} right>
           {Routes()}

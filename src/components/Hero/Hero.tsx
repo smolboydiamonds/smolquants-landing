@@ -1,6 +1,15 @@
 import styled from 'styled-components'
 import {StyledCTAButton} from '../Button/Button'
 import {SMOLQUANTS_LINKS} from '../../constants/links'
+import eightbit_bg from '../../assets/images/laptop-sunset-background.gif'
+
+const Wrapper = styled.div<{src?: string}>`
+  background: url(${({src}) => src});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
+`
 
 const Container = styled.div`
   display: flex;
@@ -12,7 +21,7 @@ const Container = styled.div`
   margin: auto;
 
   ${({theme}) => theme.mediaWidth.minSmall`
-    margin: 23vh auto auto;
+    margin: 13vh auto auto;
 `}}
 `
 
@@ -62,6 +71,7 @@ export const Hero = () => {
       <HeroButtonWrapper>
         <StyledCTAButton href={SMOLQUANTS_LINKS.AIRTABLE}>Connect // Build With Us</StyledCTAButton>
       </HeroButtonWrapper>
+      <Wrapper src={eightbit_bg} />
     </Container>
   )
 }
