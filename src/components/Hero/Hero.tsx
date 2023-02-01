@@ -3,15 +3,7 @@ import {StyledCTAButton} from '../Button/Button'
 import {SMOLQUANTS_LINKS} from '../../constants/links'
 import eightbit_bg from '../../assets/images/laptop-sunset-background.gif'
 
-const Wrapper = styled.div<{src?: string}>`
-  background: url(${({src}) => src});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 300px;
-`
-
-const Container = styled.div`
+const Container = styled.div<{src?: string}>`
   display: flex;
   flex-direction: column;
   max-width: 850px;
@@ -19,6 +11,10 @@ const Container = styled.div`
   font-weight: bold;
   text-align: center;
   margin: auto;
+  background: url(${({src}) => src});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   ${({theme}) => theme.mediaWidth.minSmall`
     margin: 13vh auto auto;
@@ -56,6 +52,14 @@ const HeroButtonWrapper = styled.div`
   margin: 20px auto;
 `
 
+const EightBitImage = styled.div<{src?: string}>`
+  background: url(${({src}) => src});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+`
+
 enum HeroText {
   HEADER = 'SmolQuants',
   DESCRIPTION = `Pre-Launch Economic Audits for DeFi Protocols, specializing in DEXs`,
@@ -69,9 +73,9 @@ export const Hero = () => {
       <Line />
       <Description>{HeroText.DESCRIPTION}</Description>
       <HeroButtonWrapper>
-        <StyledCTAButton href={SMOLQUANTS_LINKS.AIRTABLE}>Connect // Build With Us</StyledCTAButton>
+        <StyledCTAButton href={SMOLQUANTS_LINKS.AIRTABLE}>Anti-Rekt Audit</StyledCTAButton>
       </HeroButtonWrapper>
-      <Wrapper src={eightbit_bg} />
+      <EightBitImage src={eightbit_bg} />
     </Container>
   )
 }
