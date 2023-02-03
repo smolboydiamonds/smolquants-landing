@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import {StyledCTAButton} from '../Button/Button'
 import {SMOLQUANTS_LINKS} from '../../constants/links'
 import eightbit_bg from '../../assets/images/laptop-sunset-background.gif'
+import {Cube} from '../Cube/Cube'
 
 const Container = styled.div<{src?: string}>`
   display: flex;
@@ -76,6 +77,7 @@ export const Hero = () => {
         <StyledCTAButton href={SMOLQUANTS_LINKS.AIRTABLE}>Anti-Rekt Audit</StyledCTAButton>
       </HeroButtonWrapper>
       <EightBitImage src={eightbit_bg} />
+      <Cube />
     </Container>
   )
 }

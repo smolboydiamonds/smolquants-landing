@@ -162,9 +162,7 @@ export default function Header() {
         </LeftCorner>
         <NavigationPanel>{Routes()}</NavigationPanel>
         <RightCorner>
-          <StyledCTAButton href={SMOLQUANTS_LINKS.AIRTABLE}>
-            Connect // Build With Us
-          </StyledCTAButton>
+          <StyledCTAButton href={SMOLQUANTS_LINKS.AIRTABLE}>Anti-Rekt Audit</StyledCTAButton>
         </RightCorner>
       </DesktopView>
 
