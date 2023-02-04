@@ -6,7 +6,7 @@
   border-radius: 64px;
   border-style: none;
   cursor: pointer;
-  border: 1px solid #16c0f5;
+  border: 1px solid #C38EAC;
   outline: 0;
   font-size: 14px;
 }
@@ -31,7 +31,7 @@
 
 .glow-on-hover:before {
   content: '';
-  background: linear-gradient(45deg, #00ffff, #02e1fe, #0076fd, #004cff, #00ffd5, #00f2ff, #0059ff, #00d5ff, #0062ff);
+  background: linear-gradient(45deg, #C38EAC, #ed90c5, #d997aa, #db7a9a, #d9515a, #b170e3, rgb(180, 71, 238), #dd7d3e, #f77904);
   position: absolute;
   top: -2px;
   left:-2px;
