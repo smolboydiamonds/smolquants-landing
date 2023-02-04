@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
-import Members from './pages/Members'
 import Clients from './pages/Clients'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
@@ -26,7 +25,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/members" element={<Members />} />
         <Route path="/clients" element={<Clients />} />
       </Routes>
       <Footer />

@@ -85,7 +85,6 @@ enum NavigationRoutes {
 enum NavigationText {
   ABOUT = 'About',
   SERVICES = 'Services',
-  MEMBERS = 'Members',
   CLIENTS = 'Clients',
 }
 
@@ -115,12 +114,6 @@ function Routes() {
         style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
       >
         {NavigationText.SERVICES}
-      </NavLink>
-      <NavLink
-        to={NavigationRoutes.MEMBERS}
-        style={({isActive}) => (isActive ? activeStyle : inactiveStyle)}
-      >
-        {NavigationText.MEMBERS}
       </NavLink>
       <NavLink
         to={NavigationRoutes.CLIENTS}

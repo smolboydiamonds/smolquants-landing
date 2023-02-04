@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Accordion} from '../components/Accordion/Accordion'
 import {SectionContainer, SectionTitle, SectionParagraph} from '../components/Section/Section'
 
 const PageWrapper = styled.div`
@@ -8,6 +7,7 @@ const PageWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
   flex: 1;
+  padding: 45px 0;
 `
 
 const NumberedPointContainer = styled.div`
@@ -45,7 +45,7 @@ const NumberedPoint = ({number, children}: BulletPointProps) => {
 function Services() {
   return (
     <PageWrapper>
-      <SectionContainer>
+      <SectionContainer border={true}>
         <SectionTitle text="Services" />
         <SectionParagraph>Generally, we offer economic risk audits in three ways:</SectionParagraph>
         <NumberedPoint number={1}>
