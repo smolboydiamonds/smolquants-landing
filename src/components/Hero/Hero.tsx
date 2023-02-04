@@ -23,8 +23,13 @@ const Container = styled.div<{src?: string}>`
 `
 
 const Header = styled.div`
-  font-size: 64px;
-  letter-spacing: 5px;
+  font-size: 45px;
+  letter-spacing: 3px;
+
+  ${({theme}) => theme.mediaWidth.minSmall`
+    font-size: 64px;
+    letter-spacing: 5px;
+`}}
 `
 
 const Subheader = styled.div`
@@ -32,9 +37,10 @@ const Subheader = styled.div`
 `
 
 const Line = styled.div`
-  height: 1px;
+  height: 2px;
+  border-radius: 10px;
   width: auto;
-  background: #fff;
+  background: #c38eac;
   margin: 18px 0;
 `
 
