@@ -53,14 +53,6 @@ const HeroButtonWrapper = styled.div`
   margin: 20px auto;
 `
 
-const EightBitImage = styled.div<{src?: string}>`
-  background: url(${({src}) => src});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 200px;
-`
-
 enum HeroText {
   HEADER = 'SmolQuants',
   DESCRIPTION = `Pre-Launch Economic Audits for DeFi Protocols, specializing in DEXs`,
