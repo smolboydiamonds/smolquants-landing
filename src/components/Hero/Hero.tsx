@@ -18,7 +18,7 @@ const Container = styled.div<{src?: string}>`
   background-size: contain;
 
   ${({theme}) => theme.mediaWidth.minSmall`
-    margin: 13vh auto auto;
+    margin: 10vh auto auto;
 `}}
 `
 
