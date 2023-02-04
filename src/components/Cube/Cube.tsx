@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import './Cube.scss'
 
 const CubeContainer = styled.div`
-  margin-top: 50px;
+  margin-top: 30px;
 `
 
 export const Cube = () => {

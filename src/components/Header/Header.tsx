@@ -91,7 +91,7 @@ enum NavigationText {
 
 const activeStyle = {
   textDecoration: 'none',
-  color: '#16C0F5',
+  color: '#FF9CAE',
   margin: 'auto 9px',
 }
 
@@ -162,7 +162,7 @@ export default function Header() {
         </LeftCorner>
         <NavigationPanel>{Routes()}</NavigationPanel>
         <RightCorner>
-          <StyledCTAButton href={SMOLQUANTS_LINKS.AIRTABLE}>Anti-Rekt Audit</StyledCTAButton>
+          <StyledCTAButton href={SMOLQUANTS_LINKS.AIRTABLE}>Request Audit</StyledCTAButton>
         </RightCorner>
       </DesktopView>
 
