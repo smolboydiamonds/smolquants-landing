@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-export const SectionContainer = styled.div`
+export const SectionContainer = styled.div<{border?: boolean; margin?: string}>`
   max-width: 800px;
-  border-top: 1px solid #fff;
-  margin: 25px 20px auto;
+  border-top: ${({border}) => (border ? `1px solid #fff` : `none`)};
+  margin: ${({margin}) => (margin ? margin : `25px 20px auto`)};
 
   ${({theme}) => theme.mediaWidth.minSmall`
-    margin: 70px auto auto;
+    margin: 50px auto auto;
   `}}
 `
 
