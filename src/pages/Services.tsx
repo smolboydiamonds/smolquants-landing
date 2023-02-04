@@ -10,13 +10,7 @@ const PageWrapper = styled.div`
   flex: 1;
 `
 
-const PrimaryParagraph = styled(SectionParagraph)`
-  background: #373a47;
-  padding: 9px 12px;
-  border-radius: 20px;
-`
-
-const BulletPointContainer = styled.div`
+const NumberedPointContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 16px;
@@ -25,9 +19,9 @@ const BulletPointContainer = styled.div`
   margin-left: 11px;
 `
 
-const Bullet = styled.div`
+const Number = styled.div`
   width: 8px;
-  margin-right: 8px;
+  margin-right: 12px;
 `
 
 const Point = styled.div`
@@ -35,15 +29,16 @@ const Point = styled.div`
 `
 
 interface BulletPointProps {
+  number: number
   children?: React.ReactNode | string
 }
 
-const BulletPoint = ({children}: BulletPointProps) => {
+const NumberedPoint = ({number, children}: BulletPointProps) => {
   return (
-    <BulletPointContainer>
-      <Bullet>•</Bullet>
+    <NumberedPointContainer>
+      <Number>{number}.</Number>
       <Point>{children}</Point>
-    </BulletPointContainer>
+    </NumberedPointContainer>
   )
 }
 
@@ -52,69 +47,19 @@ function Services() {
     <PageWrapper>
       <SectionContainer>
         <SectionTitle text="Services" />
-        <SectionParagraph>
-          ODIS is an Advisory as a Service (AaaS) collective for Web3 companies and DAO’s. Through
-          our full suite of service offerings, we help founders bootstrap their community and
-          operations to scale on their own.
-        </SectionParagraph>
-        <SectionParagraph>
-          Our team consists of members with strong technical and non-technical backgrounds and
-          extensive experience at some of the top Web3 DAOs and companies such as Redacted Cartel,
-          Outlier Ventures, Covalent, YGG, GCR, New Order, 8it, and Krause House.
-        </SectionParagraph>
-        <SectionParagraph>Services Include:</SectionParagraph>
-
-        <Accordion accordionText={'Business Development & Partnerships'}>
-          <PrimaryParagraph>
-            Focus on building your product and hiring technical talent — our team will serve as an
-            extension of your core team with business development and partnership support.
-          </PrimaryParagraph>
-          <BulletPoint>
-            Warm introductions to ecosystem and protocol partners. No more having to send cold
-            messages and getting ghosted — we are, at most, 1 degree of separation form anyone in
-            the space.
-          </BulletPoint>
-          <BulletPoint>
-            We will attend conferences on your behalf to promote your product.
-          </BulletPoint>
-          <BulletPoint>
-            Develop a GTM strategy that we will initially help you execute on and provide
-            mentorship/guidance to future BD and Partnerships hires.
-          </BulletPoint>
-        </Accordion>
-
-        <Accordion accordionText={'Fundraising Strategy'}>
-          <PrimaryParagraph>
-            As builders and investors that have sat through 1,000+ pitches, we can help you
-            strategize and position your team for the best chances at securing capital.
-          </PrimaryParagraph>
-          <BulletPoint>
-            Direct introductions to the team’s vast network of 100+ VC’s, Angels, and Market Markers
-            (i.e., a16z, GoldenTree, Dragonfly, Polychain, Framework, Jump, GSR, Fenbushi, Steel
-            Perlot, Lightspeed and more.
-          </BulletPoint>
-          <BulletPoint>Pitch deck structuring, review, and refinement.</BulletPoint>
-          <BulletPoint>Pitch coaching.</BulletPoint>
-        </Accordion>
-
-        <Accordion accordionText={'Governance Advisory'}>
-          <PrimaryParagraph>
-            Focus on building your product and hiring technical talent — our team will serve as an
-            extension of your core team with business development and partnership support.
-          </PrimaryParagraph>
-          <BulletPoint>
-            Warm introductions to ecosystem and protocol partners. No more having to send cold
-            messages and getting ghosted — we are, at most, 1 degree of separation form anyone in
-            the space.
-          </BulletPoint>
-          <BulletPoint>
-            We will attend conferences on your behalf to promote your product.
-          </BulletPoint>
-          <BulletPoint>
-            Develop a GTM strategy that we will initially help you execute on and provide
-            mentorship/guidance to future BD and Partnerships hires.
-          </BulletPoint>
-        </Accordion>
+        <SectionParagraph>Generally, we offer economic risk audits in three ways:</SectionParagraph>
+        <NumberedPoint number={1}>
+          <b>One-off</b>: Comprehensive economic risk review of major protocol mechanisms (2-4
+          weeks)
+        </NumberedPoint>
+        <NumberedPoint number={2}>
+          <b>Retainer</b>: We work with existing clients for proactive risk review & monitoring
+          (ongoing)
+        </NumberedPoint>
+        <NumberedPoint number={3}>
+          <b>Lite Audit</b>: We offer on-demand risk reviews on specific mechanisms and produce
+          research to optimize specific aspects of your protocol (1-2 weeks)
+        </NumberedPoint>
       </SectionContainer>
     </PageWrapper>
   )
