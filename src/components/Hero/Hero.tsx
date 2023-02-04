@@ -73,10 +73,10 @@ export const Hero = () => {
       <Subheader>web3 security audits</Subheader>
       <Line />
       <Description>{HeroText.DESCRIPTION}</Description>
-      <HeroButtonWrapper>
+      {/* <HeroButtonWrapper>
         <StyledCTAButton href={SMOLQUANTS_LINKS.AIRTABLE}>Anti-Rekt Audit</StyledCTAButton>
-      </HeroButtonWrapper>
-      <EightBitImage src={eightbit_bg} />
+      </HeroButtonWrapper> */}
+      {/* <EightBitImage src={eightbit_bg} /> */}
       <Cube />
     </Container>
   )

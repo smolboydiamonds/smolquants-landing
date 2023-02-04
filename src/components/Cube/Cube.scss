@@ -1,15 +1,8 @@
 
 // toggle the cube dimensions here.
-$cubeWidth: 250px;
-$cubeHeight: 250px;
+$cubeWidth: 200px;
+$cubeHeight: 200px;
 $cubeDepth: $cubeHeight;
-
-body {
-  color: #333;
-  padding: 20px;
-  text-align: center;
-  font-family: Arial;
-}
 
 .separator {
   margin-top: 40px;
@@ -44,7 +37,7 @@ body {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transform: rotateX(-15deg) rotateY(15deg);
+  transform: rotateX(-18deg) rotateY(45deg);
 }
 
 ._3dface {
@@ -123,6 +116,10 @@ body {
   transform: rotateY(180deg); 
 }
 
+.no-border { 
+  // border: none;
+}
+
   // Apply backgrounds
   ._3dface--front {
   background: url('../../assets/images/laptop-sunset-background.gif');
@@ -139,7 +136,7 @@ body {
 }
   
    ._3dface--right {
-  background: url(https://2.bp.blogspot.com/-yrnBD8wJ-g0/UNRtPF8pR7I/AAAAAAAAATE/YSpLvqTNyoQ/s320/A+P+J+abdul+kalam_+swm+.jpg);
+  background: black;
   background-size: auto 100%;
 }
   
